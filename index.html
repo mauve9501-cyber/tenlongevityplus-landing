@@ -87,7 +87,10 @@
 
   /* ---------- cover / hero ---------- */
   .cover{position:relative; padding:104px 0 92px; text-align:center; overflow:hidden;
-    background:radial-gradient(ellipse at 50% -10%, rgba(1,90,194,0.55), transparent 60%);}
+    background:
+      linear-gradient(rgba(0,64,152,0.34), rgba(0,64,152,0.50)),
+      url("hero-bg.jpg") center/cover no-repeat,
+      var(--navy-950);}
   .cover .eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-500); display:inline-block; margin-bottom:26px;}
   .cover .ten-mark{position:relative; display:block; width:clamp(120px,15vw,156px); height:clamp(120px,15vw,156px); margin:0 auto 34px; padding:0; border:none; background:none; cursor:pointer; -webkit-tap-highlight-color:transparent;}
   .cover .ten-mark .bar-h, .cover .ten-mark .bar-v{position:absolute; background:var(--ten-color,var(--gold-500)); border-radius:2px; transition:background .3s ease;}
