@@ -3,170 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>십장생 Plus | 십장생, 다시 이야기가 되다</title>
-<meta name="description" content="해·산·물·돌·구름·소나무·불로초·거북·학·사슴 — 십장생을 현대적 캐릭터와 동화적 세계관으로 재해석한 브랜드, 십장생 Plus. Instagram @tenlongevityplus.">
+<title>십장생 Plus | 전통이 다시 태어나는 이야기</title>
+<meta name="description" content="해·산·물·구름·돌·소나무·불로초·거북·학·사슴 — 십장생을 현대적 캐릭터와 동화적 세계관으로 재해석한 브랜드, 십장생 Plus. Instagram @tenlongevityplus.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Song+Myung&family=Noto+Serif+KR:wght@500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=Song+Myung&family=Noto+Serif+KR:wght@400;500;600;700&family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* 십장생 Plus 공식 브랜드 디자인 시스템 토큰 */
-    --ink:#231815;          /* 흑단색 EBONY — 밝은 배경 위 본문/제목 텍스트 */
-    --paper:#F4EEDD;        /* 고서 아이보리 SILK IVORY — 페이지 배경 & 어두운 배경 위 밝은 텍스트 */
-    --paper-2:#ECE0C4;      /* 아이보리 계열 짙은 톤 — 섹션 구분 배경 */
-    --brand:#004098;        /* 청색 DEEP BLUE — 브랜드 대표색, 어두운 배경/솔리드 도형 */
-    --brand-2:#015AC2;      /* 군청색 AZURITE BLUE — 보조 블루, 그라데이션·호버 */
-    --accent:#F8DE05;       /* 치자색 GARDENIA YELLOW — 장식 포인트, CTA 배경 */
-    --accent-ink:#7A6600;   /* 치자색 파생 저채도 톤 — 밝은 배경 위 텍스트용(대비 확보) */
-    --forest:#149243;       /* 짙은 녹색 FOREST GREEN — 확장 팔레트 */
-    --red:#E60012;          /* 연지색 CARMINE — 확장 팔레트, 강조 */
-    --line:#e6dcc4;
-    --white:#fffbf0;
-    --max:1080px;
+    /* 십장생플러스 공식 브랜드 스타일가이드 토큰 (병풍 폭 구성) */
+    --navy-950:#004098;   /* 청색 DEEP BLUE — 페이지 기본 배경 */
+    --navy-900:#151F45;   /* 짙은 남색 — 카드/모크 배경 */
+    --navy-800:#231815;   /* 흑단색 EBONY — 작은 디테일 배경 */
+    --line:rgba(243,236,218,0.14);
+    --line-strong:rgba(243,236,218,0.26);
+    --gold-500:#F8DE05;   /* 치자색 GARDENIA — 강조 전용 */
+    --gold-300:#FAEA5D;
+    --ivory-100:#F4EEDD;  /* 고서 아이보리 SILK IVORY — 남색 위 텍스트 */
+    --ivory-300:#D9D0B8;
+    --ivory-muted:#B9B3A0;
+    --panel-light-bg:#FAFAFA;
+    --pine-500:#03BF8D;
+    --blue-500:#015AC2;   /* 군청색 AZURITE */
+    --forest-500:#149243;
+    --carmine-500:#E60012;
+    --ember-500:#FF43B3;
+    --ink:#231815;        /* 밝은 패널 위 본문 */
+    --font-display:'Song Myung','Nanum Myeongjo',serif;
+    --font-serif:'Noto Serif KR','Nanum Myeongjo',serif;
+    --font-sans:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;
+    --font-mono:'Roboto Mono',monospace;
+    --max:1120px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ *{animation:none!important; transition:none!important;} }
+  html{scroll-behavior:smooth; background:var(--navy-950);}
   body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"Pretendard","Noto Sans KR",sans-serif;
+    background:var(--navy-950);
+    color:var(--ivory-100);
+    font-family:var(--font-sans);
+    font-size:17px;
     line-height:1.7;
+    -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  ::selection{background:var(--accent); color:var(--ink);}
-  h1,h2,h3{font-family:"Song Myung","Noto Serif KR",serif; font-weight:400; letter-spacing:-0.01em;}
   a{color:inherit; text-decoration:none;}
+  ::selection{background:var(--gold-500); color:var(--navy-950);}
   img,svg{max-width:100%; display:block;}
-  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px; position:relative;}
-  .eyebrow{
-    font-size:12.5px; letter-spacing:0.24em; text-transform:uppercase;
-    color:var(--accent-ink); font-weight:700; display:flex; align-items:center; justify-content:center; gap:10px;
-  }
-  .eyebrow::before, .eyebrow::after{content:""; width:20px; height:1px; background:var(--accent);}
+  h1,h2,h3,h4{text-wrap:balance; margin:0; font-weight:400;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px; position:relative;}
 
-  /* NAV */
-  header.nav{position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(244,238,221,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
-  .nav-inner{max-width:var(--max); margin:0 auto; padding:14px 28px; display:flex; align-items:center; justify-content:space-between;}
-  .brandmark{display:flex; align-items:center; gap:10px; font-family:"Song Myung",serif; font-size:19px; color:var(--ink);}
-  .brandmark svg{width:30px; height:30px;}
-  .nav-cta{font-size:13.5px; font-weight:700; padding:9px 18px; border-radius:999px; background:var(--brand); color:var(--paper);}
-  .nav-cta:hover{background:var(--brand-2);}
+  /* ---------- sticky nav ---------- */
+  header.topnav{position:sticky; top:0; z-index:30; background:rgba(1,90,194,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .topnav-inner{max-width:var(--max); margin:0 auto; padding:13px 32px; display:flex; align-items:center; justify-content:space-between; gap:20px;}
+  .brandmark{display:flex; align-items:center; gap:9px; color:var(--ivory-100);}
+  .brandmark .wm-horiz{width:118px; height:auto; color:var(--ivory-100);}
+  .brandmark .plus{font-family:var(--font-mono); font-size:12px; color:var(--gold-300); letter-spacing:0.06em; border:1px solid var(--line-strong); border-radius:999px; padding:2px 8px;}
+  .nav-cta{font-family:var(--font-sans); font-size:13.5px; font-weight:700; padding:9px 18px; border-radius:2px; background:var(--gold-500); color:var(--navy-950); letter-spacing:0.02em; white-space:nowrap;}
+  .nav-cta:hover{filter:brightness(1.06);}
 
-  /* HERO */
-  .hero{position:relative; padding:172px 0 96px; text-align:center; overflow:hidden; background:
-    radial-gradient(ellipse at 18% 0%, rgba(20,146,67,0.08), transparent 55%),
-    radial-gradient(ellipse at 85% 6%, rgba(248,222,5,0.16), transparent 55%);
-  }
-  .hero .wrap{z-index:1;}
-  .hero::before{
-    content:"十"; position:absolute; top:-64px; left:50%; transform:translateX(-50%);
-    font-family:"Song Myung",serif; font-size:min(58vw,560px); line-height:1; color:var(--brand); opacity:.045; z-index:0; pointer-events:none;
-  }
+  /* ---------- fold label (제N폭) ---------- */
+  .fold-label{display:flex; align-items:baseline; gap:12px; margin-bottom:26px;}
+  .fold-label .num{font-family:var(--font-serif); font-size:14px; color:var(--gold-500); letter-spacing:0.08em;}
+  .fold-label .num::after{content:""; display:inline-block; width:28px; height:1px; background:var(--gold-500); margin-left:12px; vertical-align:middle;}
+  .fold-label .en{font-family:var(--font-mono); font-size:11px; color:var(--ivory-muted); letter-spacing:0.12em; text-transform:uppercase;}
 
-  /* HERO RING — 십장생 열 상징 아이콘이 중심 엠블럼을 둘러싸는 구성 */
-  .hero-ring{--r:132px; position:relative; width:296px; height:296px; margin:0 auto 34px;}
-  .ring-center{position:absolute; inset:0; margin:auto; width:112px; height:112px; border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, var(--brand-2), var(--brand)); box-shadow:0 16px 36px rgba(0,64,152,0.30);
-    display:flex; align-items:center; justify-content:center;}
-  .ring-center span{font-family:"Song Myung",serif; font-size:44px; color:var(--paper); line-height:1;}
-  .ring-item{position:absolute; top:50%; left:50%; width:44px; height:44px; margin:-22px;
-    border-radius:50%; background:var(--white); border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center;
-    transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));}
-  .ring-item svg{width:22px; height:22px; stroke:var(--brand);}
+  /* ---------- panels (병풍 폭) ---------- */
+  .panel{position:relative; padding:84px 0;}
+  .panel::before{content:""; position:absolute; left:0; top:0; bottom:0; width:1px; background:linear-gradient(to bottom, transparent, var(--line-strong) 12%, var(--line-strong) 88%, transparent);}
+  .panel.light{background:var(--panel-light-bg); color:var(--ink);}
+  .panel.light::before{background:linear-gradient(to bottom, transparent, rgba(0,0,0,0.16) 12%, rgba(0,0,0,0.16) 88%, transparent);}
+  .panel.light .fold-label .num{color:var(--navy-950);}
+  .panel.light .fold-label .num::after{background:var(--navy-950);}
+  .panel.light .fold-label .en{color:#8A7F74;}
 
-  .hero .eyebrow{position:relative; z-index:1;}
-  .hero h1{position:relative; z-index:1; font-size:clamp(38px,6.4vw,60px); line-height:1.18; color:var(--ink); margin-bottom:22px;}
-  .hero h1 span{color:var(--accent-ink);}
-  .hero p.lead{position:relative; z-index:1; max-width:540px; margin:0 auto 34px; font-size:16.5px; color:#4b4436;}
-  .hero-tags{position:relative; z-index:1; display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-bottom:40px;}
-  .tag{font-size:12.5px; padding:7px 14px; border:1px solid var(--line); border-radius:999px; background:var(--white); color:var(--ink); font-weight:600;}
-  .btn-row{position:relative; z-index:1; display:flex; flex-wrap:wrap; justify-content:center; gap:14px;}
-  .btn{display:inline-flex; align-items:center; gap:9px; padding:15px 28px; font-size:15px; font-weight:700; border-radius:999px; transition:transform .15s ease, box-shadow .15s ease;}
-  .btn svg{width:19px; height:19px;}
-  .btn.primary{background:var(--accent); color:var(--brand); box-shadow:0 10px 24px rgba(122,102,0,0.28);}
-  .btn.primary:hover{transform:translateY(-2px);}
-  .btn.ghost{background:var(--white); color:var(--ink); border:1.5px solid var(--line);}
-  .btn.ghost:hover{border-color:var(--brand);}
-  .stat-row{position:relative; z-index:1; display:flex; justify-content:center; gap:36px; margin-top:46px; flex-wrap:wrap;}
-  .stat b{display:block; font-family:"Song Myung",serif; font-size:26px; color:var(--ink);}
-  .stat span{font-size:12.5px; color:#8a8069; letter-spacing:0.05em;}
+  .section-head{max-width:640px; margin:0 auto 48px; text-align:center;}
+  .section-head .fold-label{justify-content:center; margin-bottom:18px;}
+  h2.title{font-family:var(--font-display); font-size:clamp(28px,4vw,40px); color:var(--ivory-100); line-height:1.25; margin-bottom:16px;}
+  .panel.light h2.title{color:var(--ink);}
+  .section-head p{font-size:15.5px; color:var(--ivory-300);}
+  .panel.light .section-head p{color:#5A4F48;}
 
-  section{padding:88px 0;}
-  .section-head{text-align:center; max-width:600px; margin:0 auto 52px;}
-  .section-head h2{font-size:clamp(28px,4vw,38px); margin-top:14px; color:var(--ink);}
-  .section-head p{margin-top:16px; color:#5a5148; font-size:15.5px;}
+  /* ---------- cover / hero ---------- */
+  .cover{position:relative; padding:104px 0 92px; text-align:center; overflow:hidden;
+    background:radial-gradient(ellipse at 50% -10%, rgba(1,90,194,0.55), transparent 60%);}
+  .cover .eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-500); display:inline-block; margin-bottom:26px;}
+  .cover .wm-badge{width:clamp(112px,15vw,150px); height:auto; color:var(--gold-500); margin:0 auto 30px;}
+  .cover h1{font-family:var(--font-display); font-size:clamp(40px,6.6vw,72px); line-height:1.16; color:var(--ivory-100); margin-bottom:16px;}
+  .cover h1 span{color:var(--gold-300);}
+  .cover .sub{font-family:var(--font-serif); font-size:clamp(16px,2vw,20px); color:var(--gold-300); margin-bottom:26px; letter-spacing:0.02em;}
+  .cover .lead{max-width:560px; margin:0 auto 32px; font-size:16.5px; color:var(--ivory-300); line-height:1.8;}
+  .chiprow{display:flex; gap:11px; flex-wrap:wrap; justify-content:center; margin-bottom:38px;}
+  .chip{border:1px solid var(--line-strong); border-radius:999px; padding:8px 16px; font-size:13px; color:var(--ivory-300); font-family:var(--font-sans);}
+  .btn-row{display:flex; flex-wrap:wrap; justify-content:center; gap:13px;}
+  .btn{display:inline-flex; align-items:center; gap:9px; padding:14px 26px; font-size:14.5px; font-weight:700; border-radius:2px; letter-spacing:0.02em; transition:transform .15s ease, filter .15s ease;}
+  .btn svg{width:18px; height:18px;}
+  .btn.primary{background:var(--gold-500); color:var(--navy-950);}
+  .btn.primary:hover{filter:brightness(1.06); transform:translateY(-1px);}
+  .btn.ghost{background:transparent; color:var(--ivory-100); border:1px solid var(--line-strong);}
+  .btn.ghost:hover{border-color:var(--gold-500); color:var(--gold-300);}
+  .panel.light .btn.ghost{color:var(--ink); border-color:rgba(0,0,0,0.22);}
+  .panel.light .btn.ghost:hover{border-color:var(--navy-950); color:var(--navy-950);}
+  .stat-row{display:flex; justify-content:center; gap:44px; margin-top:48px; padding-top:26px; border-top:1px solid var(--line); flex-wrap:wrap;}
+  .stat b{display:block; font-family:var(--font-display); font-size:28px; color:var(--ivory-100); line-height:1.1;}
+  .stat span{font-family:var(--font-mono); font-size:11px; color:var(--ivory-muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:6px; display:block;}
+  .panel.light .stat b{color:var(--ink);}
+  .panel.light .stat span{color:#8A7F74;}
 
-  /* STORY */
-  .story{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--white);}
-  .story .wrap{max-width:760px; text-align:center;}
-  .story p{font-size:16.5px; color:#3c362f; margin-bottom:18px;}
-  .story p.big{font-family:"Noto Serif KR",serif; font-weight:600; font-size:21px; color:var(--ink); line-height:1.6; margin-bottom:26px;}
+  /* ---------- story ---------- */
+  .story .wrap{max-width:760px;}
+  .story .lead-big{font-family:var(--font-serif); font-weight:600; font-size:clamp(20px,2.6vw,24px); line-height:1.6; color:var(--ink); margin-bottom:24px; text-align:center;}
+  .story p{font-size:16px; color:#4A3F3A; margin-bottom:18px; line-height:1.85;}
+  .story p b{color:var(--ink); font-weight:700;}
 
-  /* SYMBOLS GRID */
-  .symbols{background:var(--paper-2);}
-  .sym-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
-  .sym-card{background:var(--white); border:1px solid var(--line); border-radius:16px; padding:22px 10px; text-align:center; transition:transform .15s ease, box-shadow .15s ease;}
-  .sym-card:hover{transform:translateY(-4px); box-shadow:0 12px 24px rgba(0,64,152,0.10);}
-  .sym-card .ic{width:46px; height:46px; margin:0 auto 12px;}
-  .sym-card .ic svg{width:100%; height:100%; stroke:var(--brand);}
-  .sym-card h4{font-size:15.5px; font-weight:700; color:var(--ink); font-family:"Pretendard",sans-serif;}
-  .sym-card span{font-size:11px; color:#9a8f77; letter-spacing:0.04em;}
+  /* ---------- symbols grid (navy panel) ---------- */
+  .sym-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
+  .sym-card{border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:30px 12px 24px; text-align:center; transition:background .2s ease;}
+  .sym-card:hover{background:rgba(248,222,5,0.05);}
+  .sym-card .ic{width:56px; height:56px; margin:0 auto 16px; border-radius:50%; border:1px solid var(--line-strong); display:flex; align-items:center; justify-content:center;}
+  .sym-card .ic svg{width:28px; height:28px; stroke:var(--gold-500);}
+  .sym-card h4{font-family:var(--font-serif); font-size:15.5px; color:var(--ivory-100); margin-bottom:3px;}
+  .sym-card span{font-family:var(--font-mono); font-size:10.5px; color:var(--ivory-muted); letter-spacing:0.06em;}
 
-  /* WORLD / UNIVERSE */
-  .universe{background:var(--white);}
-  .uni-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px;}
-  .uni-card{border:1px solid var(--line); border-radius:20px; padding:30px 26px; position:relative; overflow:hidden; background:var(--paper);}
-  .uni-card .tagline{font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-ink); font-weight:700; margin-bottom:12px;}
-  .uni-card h4{font-family:"Song Myung",serif; font-size:22px; color:var(--ink); margin-bottom:10px;}
-  .uni-card p{font-size:14px; color:#5a5148;}
-  .uni-card .ic{width:50px; height:50px; border-radius:50%; background:var(--brand); display:flex; align-items:center; justify-content:center; margin-bottom:16px;}
-  .uni-card .ic svg{width:26px; height:26px; stroke:var(--accent);}
+  /* ---------- universe (light panel) ---------- */
+  .uni-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+  .uni-card{border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:30px 26px; background:#fff;}
+  .uni-card .ic{width:52px; height:52px; border-radius:50%; background:var(--navy-950); display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
+  .uni-card .ic svg{width:26px; height:26px; stroke:var(--gold-500);}
+  .uni-card .tagline{font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy-950); margin-bottom:10px;}
+  .uni-card h4{font-family:var(--font-display); font-size:22px; color:var(--ink); margin-bottom:10px;}
+  .uni-card p{font-size:14px; color:#5A4F48; line-height:1.75;}
 
-  /* FEED CTA */
-  .feed{background:var(--brand); color:var(--paper); text-align:center;}
-  .feed .eyebrow{color:var(--accent);}
-  .feed .eyebrow::before,.feed .eyebrow::after{background:var(--accent);}
-  .feed h2{color:var(--paper); margin-top:14px; font-size:clamp(26px,4vw,36px);}
-  .feed p{color:#c7d3e6; max-width:480px; margin:16px auto 36px; font-size:15.5px;}
-  .feed-stats{display:flex; justify-content:center; gap:40px; margin-bottom:40px; flex-wrap:wrap;}
-  .feed-stats .stat b{color:var(--paper);}
-  .feed-stats .stat span{color:#a9bcd8;}
-  .feed .btn.primary{box-shadow:0 10px 30px rgba(0,0,0,0.35);}
-  .feed .btn.ghost{background:transparent; color:var(--paper); border-color:rgba(244,238,221,0.32);}
-  .feed .btn.ghost:hover{border-color:var(--accent);}
+  /* ---------- join / feed CTA (navy panel) ---------- */
+  .join{text-align:center; background:radial-gradient(ellipse at 50% 120%, rgba(1,90,194,0.5), transparent 62%);}
+  .join .wrap{max-width:640px;}
+  .join .feed-stats{display:flex; justify-content:center; gap:44px; margin:30px 0 34px; flex-wrap:wrap;}
 
-  /* LINK BACK */
-  .linkback{background:var(--paper); text-align:center; padding:60px 0;}
-  .linkback p{font-size:14.5px; color:#8a8069; margin-bottom:10px;}
-  .linkback a{font-weight:700; color:var(--ink); border-bottom:1.5px solid var(--accent);}
-
-  footer{padding:34px 0; text-align:center; font-size:12.5px; color:#a49a80; background:var(--paper);}
+  /* ---------- linkback + footer ---------- */
+  .linkback{text-align:center; padding:52px 0; border-top:1px solid var(--line);}
+  .linkback p{font-size:14px; color:var(--ivory-muted); margin-bottom:10px;}
+  .linkback a{font-family:var(--font-serif); color:var(--ivory-100); border-bottom:1.5px solid var(--gold-500); padding-bottom:2px;}
+  .linkback a:hover{color:var(--gold-300);}
+  footer{padding:34px 0 48px; text-align:center;}
+  footer p{font-family:var(--font-mono); font-size:11.5px; color:var(--ivory-muted); letter-spacing:0.04em;}
 
   @media (max-width:760px){
+    .wrap{padding:0 22px;}
+    .topnav-inner{padding:12px 22px;}
     .sym-grid{grid-template-columns:repeat(3,1fr);}
-  }
-  @media (max-width:560px){
-    .hero-ring{--r:98px; width:230px; height:230px;}
-    .ring-center{width:88px; height:88px;}
-    .ring-center span{font-size:34px;}
-    .ring-item{width:38px; height:38px; margin:-19px;}
-    .ring-item svg{width:19px; height:19px;}
+    .stat-row{gap:30px;}
   }
   @media (max-width:480px){
+    body{font-size:16px;}
     .sym-grid{grid-template-columns:repeat(2,1fr);}
-    .stat-row{gap:24px;}
+    .brandmark .plus{display:none;}
   }
 </style>
 </head>
 <body>
 
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#top" class="brandmark">
-      <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#F8DE05" stroke-width="1.6"/><circle cx="20" cy="20" r="7" fill="#004098"/><circle cx="20" cy="9" r="2.2" fill="#F8DE05"/><circle cx="31" cy="20" r="2.2" fill="#F8DE05"/><circle cx="20" cy="31" r="2.2" fill="#F8DE05"/><circle cx="9" cy="20" r="2.2" fill="#F8DE05"/></svg>
-      십장생 Plus
+<header class="topnav">
+  <div class="topnav-inner">
+    <a href="#top" class="brandmark" aria-label="십장생플러스">
+      <svg class="wm-horiz" viewBox="0 0 1060.16 232.44"><style type="text/css">
+	.markh-st0{fill:currentColor;}
+</style>
+<g>
+	<path class="markh-st0" d="M981.97,1.61h-10.45V59.5c0,46.93-34.86,77.01-77.01,77.01v5.65c40.64,0,76.61-19.8,85.4-70.3
+		c8.15-4.19,11.79-5.13,20.95-5.13c26.87,0,43.86,22.79,43.86,49.67c0,19.26-10.9,41.4-32.17,47.09l2.19,6.77
+		c24.96-6.67,40.71-32.54,40.71-57.12c0-29.69-21.23-53.94-52.78-53.94c-9.22,0-15.83,2.35-21.69,5.26
+		c0.64-5.59,0.98-11.51,0.98-17.79V1.61z"/>
+	<rect x="889.31" y="216.93" class="markh-st0" width="169.73" height="5.65"/>
+	<polygon class="markh-st0" points="858.23,74.61 821.13,74.61 821.13,80.25 858.23,80.25 858.23,222.46 868.68,222.46 868.68,0.11
+		858.23,0.11 	"/>
+	<path class="markh-st0" d="M730.9,179.46c0-23.22,17.96-38.74,37.7-38.74c31.98,0,44.46-14.87,44.46-38.01v-0.02
+		c0-12.95-15.07-27.63-29.19-27.63c15.12,0,29.35-14.19,29.46-29.26h0.01c0-0.07,0-0.13,0-0.19c0-0.03,0-0.06,0-0.09h0
+		c0-15.56-13.05-33.61-44.74-33.61l-38.99,0.01v5.65l40.71-0.01c19.21,0,32.29,10.76,32.29,28.08c0,17.56-16.77,26.37-33.04,26.43
+		c-0.04,0-0.08,0-0.12,0v0.01h-40.07v6.5h39.22c0.04,0,0.07,0,0.11,0c16.31,0.07,33.61,8.13,33.61,28.53v0.02
+		c0,13.76-10.59,27.15-28.17,27.15c-29.94,0-53.99,14.67-53.99,41.53c0,26.98,22.05,46.56,60.44,46.56h63.26v-7.06H774.1
+		C747.53,215.28,730.97,195.76,730.9,179.46z"/>
+	<rect x="541.51" y="131.58" class="markh-st0" width="166.03" height="5.65"/>
+	<path class="markh-st0" d="M565.12,204.73l0-0.01c0-6.24,5.11-14.28,15.55-14.28h77.28c16.54,0,31.38-3.65,31.38-17.88h0
+		c0-0.01,0-0.02,0-0.03c0-0.02,0-0.04,0-0.07h-0.01c0-12.24-10.86-18.43-30.78-18.43l-99.93-0.02v5.65h103.29
+		c9.46,0,16.7,5.31,16.97,12.86c0.02,6.3-5.1,11.41-15.69,11.41l-75.37,0.01c-25.57,0-33.15,8.74-33.15,20.77l0,0.01
+		c0,11,8.58,20.51,31.16,20.51H694.1v-7.06H582.12C571.5,218.18,565.12,211.06,565.12,204.73z"/>
+	<path class="markh-st0" d="M608.99,76.8l0.02-52.21h-10.45l-0.02,51.05c0,15.44-10.53,33.37-23.48,33.39h-16.44l0.08,5.73h14.99
+		c0.01,0,0.03,0,0.04,0h119.88l0-5.73H586.69C595.98,109.02,608.99,89.91,608.99,76.8z"/>
+	<path class="markh-st0" d="M695.6,10.54H568.23v5.85h98.45c-4.42,0-15.52,11.34-15.52,31.48l-0.02,52.58h10.45l0.02-51.87
+		c0-20.13,4.54-32.19,17.5-32.19h16.48V10.54z"/>
+</g>
+<g>
+	<path class="markh-st0" d="M328.04,144.25V36.66c12,3.43,21.94,13.96,21.94,29.65h5.65c0-17.15-11.68-31.57-27.59-35.47V9.66h-10.45
+		v137.26l0.27,0.07c9.54,7.87,15.03,20.01,15.03,33.62c0,23.66-16.78,46.13-41.79,46.13c-25.96,0-42.1-22.46-42.1-46.13
+		c0-18,10.33-33.43,26.06-39.8l3.37-1.18l5.75-1.68v-6.01c0-25.33-18.64-46.4-42.93-50.23c0.43-3.35,0.68-6.8,0.68-10.38l0.04-47.55
+		h37.66v-5.65h-85.56v5.65h37.17l-0.04,51.95c0,32.87-25.89,59.61-58.77,59.61v5.65c32.57,0,60.92-20.35,67.86-53.57
+		c19.56,3.86,32.59,23.57,32.59,44.52v0.61c-19.51,7.36-34.62,26.12-34.62,48.06c0,28.33,21.97,51.39,52.83,51.39
+		c30.32,0,52.8-23.05,52.8-51.39C343.91,166.41,337.71,153.56,328.04,144.25z"/>
+	<path class="markh-st0" d="M520.76,6.73h-10.45v42.2c-6.7-10.78-18.72-18.92-30.45-19.12V7.13l-10.73,0.18v121.9
+		c-28.25,0.1-52.61,23.11-52.61,51.39c0,28.33,21.12,51.39,52.8,51.39c34.55,0,50.75-22.19,51.36-49.78l0.07-0.02V6.73z
+		 M469.33,226.73c-27.03,0-42.07-22.46-42.07-46.13c0-23.67,18.41-44.33,42.07-44.33c3.13,0,7.59,0.35,10.54,0.99v-1.72v-5.49V35.46
+		c15.32,0.28,30.43,15.54,30.43,30.85h0.02V180.6h-0.04C510.27,204.26,496.44,226.73,469.33,226.73z"/>
+	<path class="markh-st0" d="M37.81,145.36l0,24.99c0,39.48,28.58,62.2,60.23,62.2c36.95,0,60.22-26.59,60.22-62.2V152.8l0,0V7.26h-10.45
+		v141.65h0l0,23.97c0,26.98-22.8,53.95-49.78,53.95c-24.47,0-45.27-18.7-48.92-45.47h80.69v-5.65h-81.2
+		c-0.04-0.94-0.06-1.88-0.06-2.83l0-29.18c28.74-5.35,59.93-18.79,59.93-51.97c0-15.58-11.57-24.27-26.7-31.19
+		c8.48-9.42,11.38-21.63,11.38-36.06V12.78H82.71v16.83c0,29.49-17.62,45.86-81.46,45.86v6.49c39.74,0,63.23-6.3,76.51-17.55
+		c11.65,5.49,19.7,15.86,19.7,32.22c0,48.6-96.21,44.65-96.21,44.65v5.65C1.25,146.92,17.75,147.89,37.81,145.36z"/>
+	<path class="markh-st0" d="M454.19,91.85c0-23.34-15.6-28.75-24.9-33.3c6.7-8.29,11.07-19.54,11.07-34.77v-11h-10.45v17.01
+		c0,52.17-69.77,45.71-69.77,45.71v5.65c0,0,42.83,4.21,65.9-18.99c6.27,2.7,18.68,10.87,18.68,33.25
+		c0,40.96-84.59,44.66-84.59,44.66v5.64C360.15,145.71,454.19,142.37,454.19,91.85z"/>
+</g></svg>
+      <span class="plus">Plus</span>
     </a>
     <a class="nav-cta" href="https://www.instagram.com/tenlongevityplus/" target="_blank" rel="noopener">Instagram 팔로우</a>
   </div>
@@ -174,30 +219,64 @@
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- COVER / HERO -->
+  <section class="cover">
     <div class="wrap">
-      <div class="hero-ring">
-        <div class="ring-center"><span>十</span></div>
-        <div class="ring-item" style="--a:0deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><circle cx="20" cy="20" r="10"/><line x1="20" y1="4" x2="20" y2="9"/><line x1="20" y1="31" x2="20" y2="36"/><line x1="4" y1="20" x2="9" y2="20"/><line x1="31" y1="20" x2="36" y2="20"/></svg></div>
-        <div class="ring-item" style="--a:36deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M6 30 L16 12 L22 22 L27 14 L34 30 Z"/></svg></div>
-        <div class="ring-item" style="--a:72deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M4 22 Q10 16 16 22 T28 22 T36 22"/><path d="M4 30 Q10 24 16 30 T28 30 T36 30"/></svg></div>
-        <div class="ring-item" style="--a:108deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M10 26 Q6 26 6 21 Q6 16 11 16 Q12 10 19 10 Q26 10 27 17 Q33 17 33 23 Q33 28 27 28 Z"/></svg></div>
-        <div class="ring-item" style="--a:144deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><ellipse cx="20" cy="24" rx="14" ry="9"/><ellipse cx="20" cy="24" rx="7" ry="4.5"/></svg></div>
-        <div class="ring-item" style="--a:180deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M20 4 L28 16 L23 16 L30 26 L24 26 L24 36 L16 36 L16 26 L10 26 L17 16 L12 16 Z"/></svg></div>
-        <div class="ring-item" style="--a:216deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M20 34 C20 22 12 22 12 14 C12 9 16 6 20 10 C24 6 28 9 28 14 C28 22 20 22 20 34 Z"/></svg></div>
-        <div class="ring-item" style="--a:252deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><ellipse cx="20" cy="23" rx="13" ry="9"/><path d="M9 20 Q5 18 4 12 Q9 12 11 17"/><circle cx="20" cy="23" r="3"/></svg></div>
-        <div class="ring-item" style="--a:288deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M20 8 C13 8 9 14 9 20 C9 27 14 33 20 33 C26 33 31 27 31 20 C31 14 27 8 20 8 Z" transform="rotate(35 20 20)"/><circle cx="26" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg></div>
-        <div class="ring-item" style="--a:324deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M12 30 L12 18 L20 8 L28 18 L28 30" /><line x1="12" y1="30" x2="28" y2="30"/><path d="M14 12 L11 6 M26 12 L29 6"/></svg></div>
-      </div>
-      <div class="eyebrow">Ten Longevity Symbols · Reborn</div>
-      <h1>십장생<span>(十長生)</span>,<br>다시 이야기가 되다</h1>
-      <p class="lead">해(日)·산(山)·물(水)·돌(石)·구름(雲)·소나무(松)·불로초(不老草)·거북(龜)·학(鶴)·사슴(鹿) — 오래도록 장수와 안녕을 기원해온 열 가지 상징이, 오늘의 캐릭터와 패턴으로 다시 그려진다.</p>
-      <div class="hero-tags">
-        <span class="tag">전통 문양의 재해석</span>
-        <span class="tag">캐릭터 · 굿즈</span>
-        <span class="tag">동화적 세계관</span>
-        <span class="tag">십이지신 · 바이크월드</span>
+      <span class="eyebrow">Ten Longevity Symbols · Reborn</span>
+      <svg class="wm-badge" viewBox="0 0 521.57 481.89" style="width:clamp(150px,20vw,300px); height:auto; display:block; color:var(--ivory-100);">
+<style type="text/css">
+	.mark-st0{fill:currentColor;}
+</style>
+<g>
+	<path class="mark-st0" d="M328.19,137.16V29.15c12.05,3.44,22.03,14.02,22.03,29.77h5.67c0-17.22-11.73-31.69-27.7-35.6V2.04H317.7
+		v137.79l0.27,0.07c9.58,7.9,15.09,20.09,15.09,33.75c0,23.76-16.85,46.3-41.95,46.3c-26.06,0-42.26-22.55-42.26-46.3
+		c0-18.07,10.37-33.56,26.16-39.95l3.39-1.19l5.78-1.68v-6.03c0-25.43-18.71-46.58-43.09-50.43c0.44-3.36,0.68-6.83,0.68-10.42
+		l0.04-47.74h37.8v-5.67h-85.89v5.67h37.31l-0.04,52.15c0,33-26,59.84-59,59.84v5.67c32.69,0,61.15-20.43,68.13-53.77
+		c19.63,3.87,32.72,23.66,32.72,44.7v0.61c-19.59,7.39-34.75,26.22-34.75,48.24c0,28.44,22.05,51.59,53.04,51.59
+		c30.43,0,53.01-23.14,53.01-51.59C344.12,159.41,337.89,146.5,328.19,137.16z"/>
+	<path class="mark-st0" d="M442.23,258.51h-10.49v58.12c0,47.11-34.99,77.31-77.31,77.31v5.67c40.8,0,76.91-19.88,85.74-70.57
+		c8.18-4.2,11.84-5.15,21.04-5.15c26.98,0,44.03,22.88,44.03,49.86c0,19.33-10.94,41.56-32.29,47.27l2.2,6.8
+		c25.06-6.7,40.87-32.66,40.87-57.35c0-29.8-21.32-54.15-52.98-54.15c-9.26,0-15.89,2.36-21.78,5.28
+		c0.65-5.61,0.99-11.55,0.99-17.86V258.51z"/>
+	<rect x="349.21" y="474.66" class="mark-st0" width="170.39" height="5.67"/>
+	<polygon class="mark-st0" points="318,331.79 280.77,331.79 280.77,337.46 318,337.46 318,480.22 328.5,480.22 328.5,257 318,257 	"/>
+	<path class="mark-st0" d="M190.18,437.05c0-23.31,18.03-38.89,37.85-38.89c32.1,0,44.63-14.93,44.63-38.16v-0.02
+		c0-13-15.13-27.74-29.3-27.74c15.17,0,29.46-14.25,29.57-29.38h0.01c0-0.07,0-0.13,0-0.2c0-0.03,0-0.06,0-0.09h0
+		c0-15.62-13.1-33.74-44.91-33.74l-39.14,0.01v5.67l40.87-0.01c19.28,0,32.41,10.8,32.41,28.19c0,17.63-16.83,26.47-33.17,26.54
+		c-0.04,0-0.08,0-0.12,0v0.01h-40.23v6.52h39.38c0.04,0,0.07,0,0.11,0c16.37,0.07,33.75,8.16,33.75,28.64v0.02
+		c0,13.82-10.63,27.25-28.28,27.25c-30.06,0-54.2,14.73-54.2,41.69c0,27.08,22.14,46.74,60.68,46.74h63.51v-7.09h-70.05
+		C206.87,473.01,190.26,453.41,190.18,437.05z"/>
+	<rect x="0.06" y="388.99" class="mark-st0" width="166.68" height="5.67"/>
+	<path class="mark-st0" d="M23.76,462.41l0-0.01c0-6.26,5.13-14.34,15.61-14.34h77.58c16.6,0,31.5-3.67,31.5-17.95h0
+		c0-0.01,0-0.02,0-0.03c0-0.02,0-0.04,0-0.07h-0.01c0-12.29-10.9-18.5-30.9-18.5L17.23,411.5v5.67h103.69
+		c9.5,0,16.77,5.33,17.04,12.91c0.02,6.33-5.12,11.46-15.75,11.46l-75.66,0.01c-25.67,0-33.28,8.78-33.28,20.85l0,0.01
+		c0,11.04,8.62,20.59,31.28,20.59h108.69v-7.09H40.83C30.16,475.92,23.76,468.77,23.76,462.41z"/>
+	<path class="mark-st0" d="M67.8,333.98l0.02-52.42H57.33l-0.02,51.25c0,15.5-10.57,33.5-23.57,33.52H17.23l0.08,5.76h15.05
+		c0.01,0,0.03,0,0.04,0h120.35l0-5.76H45.41C54.74,366.34,67.8,347.15,67.8,333.98z"/>
+	<path class="mark-st0" d="M154.74,267.47H26.88v5.87h98.84c-4.44,0-15.58,11.39-15.58,31.6l-0.02,52.78h10.49l0.02-52.07
+		c0-20.21,4.55-32.31,17.57-32.31h16.55V267.47z"/>
+	<path class="mark-st0" d="M521.65-0.9h-10.49v42.37c-6.72-10.83-18.79-18.99-30.57-19.19V-0.49l-10.77,0.18v122.38
+		c-28.36,0.11-52.81,23.2-52.81,51.59c0,28.44,21.2,51.59,53,51.59c34.69,0,50.95-22.27,51.56-49.97l0.07-0.02V-0.9z M470.02,219.95
+		c-27.14,0-42.23-22.55-42.23-46.3c0-23.76,18.48-44.51,42.23-44.51c3.14,0,7.62,0.35,10.58,0.99v-1.73v-5.52V27.95
+		c15.38,0.28,30.55,15.6,30.55,30.97h0.02v114.73h-0.04C511.12,197.41,497.25,219.95,470.02,219.95z"/>
+	<path class="mark-st0" d="M36.83,138.27l0,25.09c0,39.63,28.69,62.45,60.46,62.45c37.09,0,60.46-26.69,60.46-62.45v-17.62l0,0V-0.36
+		h-10.49v142.2h0l0,24.06c0,27.09-22.89,54.16-49.97,54.16c-24.57,0-45.44-18.77-49.11-45.65h81v-5.67H47.67
+		c-0.04-0.94-0.06-1.89-0.06-2.84l0-29.3c28.85-5.37,60.16-18.87,60.16-52.18c0-15.64-11.62-24.37-26.8-31.31
+		c8.52-9.45,11.43-21.72,11.43-36.2V5.17H81.9v16.9c0,29.6-17.69,46.03-81.77,46.03v6.52c39.89,0,63.48-6.32,76.81-17.62
+		c11.7,5.51,19.78,15.93,19.78,32.35c0,48.79-96.58,44.82-96.58,44.82v5.67C0.13,139.84,16.7,140.82,36.83,138.27z"/>
+	<path class="mark-st0" d="M454.83,84.55c0-23.43-15.66-28.86-25-33.43c6.73-8.32,11.12-19.61,11.12-34.91V5.17h-10.49v17.07
+		c0,52.38-70.04,45.89-70.04,45.89v5.67c0,0,43,4.22,66.16-19.07c6.29,2.71,18.76,10.92,18.76,33.38
+		c0,41.11-84.91,44.84-84.91,44.84v5.67C360.42,138.63,454.83,135.27,454.83,84.55z"/>
+</g>
+  </svg>
+      <h1>전통이 다시,<br><span>동화</span>가 되다</h1>
+      <p class="sub">十長生, 오래된 상징을 오늘의 문법으로</p>
+      <p class="lead">해·산·물·구름·돌·소나무·불로초·거북·학·사슴 — 장수와 안녕을 기원하던 십장생을, 오늘의 캐릭터와 이야기로 다시 그립니다.</p>
+      <div class="chiprow">
+        <span class="chip">전통 문양 재해석</span>
+        <span class="chip">캐릭터 · 굿즈</span>
+        <span class="chip">동화 세계관</span>
+        <span class="chip">십이지신 · 바이크월드</span>
       </div>
       <div class="btn-row">
         <a class="btn primary" href="https://www.instagram.com/tenlongevityplus/" target="_blank" rel="noopener">
@@ -217,23 +296,23 @@
     </div>
   </section>
 
-  <!-- STORY -->
-  <section class="story">
+  <!-- 제1폭 STORY -->
+  <section class="panel light story">
     <div class="wrap">
-      <div class="eyebrow">Story</div>
-      <p class="big" style="margin-top:18px;">열 가지 상징에, 오늘의 시선을 더한다.</p>
-      <p>십장생(十長生)은 해·산·물·돌·구름·소나무·불로초·거북·학·사슴 열 가지로 장수와 평안을 기원해온 한국의 전통 상징이다. 십장생 Plus는 이 오래된 문양을 편집디자인·브랜드 아이덴티티 전문가 박미영(d·mauve)의 시선으로 다시 그려, 현대적인 캐릭터와 패턴, 그리고 동화적 세계관으로 확장한 개인 브랜드다.</p>
-      <p>십이지신 캐릭터, 숲속 친구들이 사는 &ldquo;동화나라&rdquo;, 캐릭터 브랜드 Spoky가 등장하는 &ldquo;바이크월드&rdquo;까지 — 하나의 세계관 아래 계속 자라나는 이야기가 Instagram과 굿즈로 이어진다.</p>
+      <div class="fold-label" style="justify-content:center;"><span class="num">제1폭</span><span class="en">Story</span></div>
+      <p class="lead-big">오래도록 전해 내려온 열 가지 상징에, 오늘의 이야기를 더합니다.</p>
+      <p>십장생(十長生)은 해·산·물·돌·구름·소나무·불로초·거북·학·사슴 열 가지로 장수와 평안을 기원해온 한국의 전통 상징입니다. <b>십장생 Plus</b>는 이 오래된 문양을 편집디자인·브랜드 아이덴티티 전문가 박미영(d·mauve)의 시선으로 다시 그려, 현대적인 캐릭터와 패턴, 그리고 동화적 세계관으로 확장한 개인 브랜드입니다.</p>
+      <p>십이지신 캐릭터, 숲속 친구들이 사는 &ldquo;동화나라&rdquo;, 캐릭터 브랜드 Spoky가 등장하는 &ldquo;바이크월드&rdquo;까지 — 하나의 세계관 아래 계속 자라나는 이야기를 Instagram과 굿즈로 만나보실 수 있습니다.</p>
     </div>
   </section>
 
-  <!-- SYMBOLS -->
-  <section class="symbols" id="symbols">
+  <!-- 제2폭 THE TEN SYMBOLS -->
+  <section class="panel" id="symbols">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">The Ten Symbols</div>
-        <h2>십장생, 열 가지 이야기</h2>
-        <p>상징 하나하나가 캐릭터이자 패턴이 되어 십장생 Plus의 세계를 이룬다.</p>
+        <div class="fold-label"><span class="num">제2폭</span><span class="en">The Ten Symbols</span></div>
+        <h2 class="title">십장생, 열 가지 이야기</h2>
+        <p>각각의 상징은 하나의 캐릭터이자 패턴이 되어 십장생 Plus의 세계를 이룹니다.</p>
       </div>
       <div class="sym-grid">
         <div class="sym-card"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><circle cx="20" cy="20" r="10"/><line x1="20" y1="4" x2="20" y2="9"/><line x1="20" y1="31" x2="20" y2="36"/><line x1="4" y1="20" x2="9" y2="20"/><line x1="31" y1="20" x2="36" y2="20"/></svg></div><h4>해</h4><span>SUN</span></div>
@@ -245,48 +324,50 @@
         <div class="sym-card"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M20 34 C20 22 12 22 12 14 C12 9 16 6 20 10 C24 6 28 9 28 14 C28 22 20 22 20 34 Z"/></svg></div><h4>불로초</h4><span>HERB</span></div>
         <div class="sym-card"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><ellipse cx="20" cy="23" rx="13" ry="9"/><path d="M9 20 Q5 18 4 12 Q9 12 11 17"/><circle cx="20" cy="23" r="3"/></svg></div><h4>거북</h4><span>TURTLE</span></div>
         <div class="sym-card"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M20 8 C13 8 9 14 9 20 C9 27 14 33 20 33 C26 33 31 27 31 20 C31 14 27 8 20 8 Z" transform="rotate(35 20 20)"/><circle cx="26" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg></div><h4>학</h4><span>CRANE</span></div>
-        <div class="sym-card"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M12 30 L12 18 L20 8 L28 18 L28 30" /><line x1="12" y1="30" x2="28" y2="30"/><path d="M14 12 L11 6 M26 12 L29 6"/></svg></div><h4>사슴</h4><span>DEER</span></div>
+        <div class="sym-card"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M12 30 L12 18 L20 8 L28 18 L28 30"/><line x1="12" y1="30" x2="28" y2="30"/><path d="M14 12 L11 6 M26 12 L29 6"/></svg></div><h4>사슴</h4><span>DEER</span></div>
       </div>
     </div>
   </section>
 
-  <!-- UNIVERSE -->
-  <section class="universe">
+  <!-- 제3폭 THE UNIVERSE -->
+  <section class="panel light">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">The Universe</div>
-        <h2>십장생 Plus의 세계</h2>
-        <p>십장생을 중심으로 계속 자라나는 캐릭터와 이야기다.</p>
+        <div class="fold-label"><span class="num">제3폭</span><span class="en">The Universe</span></div>
+        <h2 class="title">십장생 Plus의 세계</h2>
+        <p>십장생을 중심으로 계속 자라나는 캐릭터와 이야기들입니다.</p>
       </div>
       <div class="uni-grid">
         <div class="uni-card">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 20 L4 10 L12 4 L20 10 L20 20 Z"/><circle cx="12" cy="14" r="2.4"/></svg></div>
           <div class="tagline">Fairytale World</div>
           <h4>동화나라</h4>
-          <p>숲속 나무 인형 친구들이 들려주는, 십장생 세계관 속 짧은 동화다.</p>
+          <p>숲속에 사는 나무 인형 친구들이 들려주는, 십장생 세계관 속 짧은 동화 이야기.</p>
         </div>
         <div class="uni-card">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M6 20 Q6 14 12 14 Q18 14 18 20"/></svg></div>
           <div class="tagline">Zodiac Characters</div>
           <h4>십이지신</h4>
-          <p>열두 띠 동물을 십장생과 같은 톤으로 그려낸 캐릭터 시리즈다.</p>
+          <p>열두 띠 동물을 십장생과 같은 톤으로 그려낸 캐릭터 시리즈.</p>
         </div>
         <div class="uni-card">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="7" cy="18" r="3"/><circle cx="17" cy="18" r="3"/><path d="M7 18 L11 8 L15 8 L17 18 M11 8 L9 12 L15 12"/></svg></div>
           <div class="tagline">Character Branding</div>
           <h4>바이크월드 · Spoky</h4>
-          <p>부엉이 캐릭터 Spoky가 안내하는 라이프스타일·모빌리티 브랜드 콘텐츠다.</p>
+          <p>부엉이 캐릭터 Spoky가 안내하는 라이프스타일·모빌리티 브랜드 콘텐츠.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEED / FOLLOW CTA -->
-  <section class="feed">
+  <!-- 제4폭 JOIN THE STORY -->
+  <section class="panel join">
     <div class="wrap">
-      <div class="eyebrow">Join the Story</div>
-      <h2>매일 조금씩, 십장생의 이야기가 자란다</h2>
-      <p>새로운 캐릭터와 굿즈, 동화가 Instagram에서 가장 먼저 공개된다.</p>
+      <div class="section-head">
+        <div class="fold-label"><span class="num">제4폭</span><span class="en">Join the Story</span></div>
+        <h2 class="title">매일 조금씩, 십장생의 이야기가 자랍니다</h2>
+        <p>새로운 캐릭터와 굿즈, 동화 이야기를 Instagram에서 가장 먼저 만나보세요.</p>
+      </div>
       <div class="feed-stats">
         <div class="stat"><b>27</b><span>Posts</span></div>
         <div class="stat"><b>40+</b><span>Followers</span></div>
@@ -304,14 +385,16 @@
 
   <!-- LINK BACK -->
   <div class="linkback">
-    <p>십장생 Plus는 박미영(d·mauve)의 개인 브랜드다.</p>
-    <a href="https://mydesignpark-branding.vercel.app" target="_blank" rel="noopener">전체 포트폴리오 보러가기 →</a>
+    <div class="wrap">
+      <p>십장생 Plus는 박미영(d·mauve)의 개인 브랜드입니다.</p>
+      <a href="https://mydesignpark-branding.vercel.app" target="_blank" rel="noopener">전체 포트폴리오 보러가기 →</a>
+    </div>
   </div>
 
 </main>
 
 <footer>
-  <span>&copy; <span id="year"></span> 십장생 Plus · Design by 박미영 (d·mauve)</span>
+  <p>&copy; <span id="year"></span> 십장생 Plus · Design by 박미영 (d·mauve)</p>
 </footer>
 
 <script>
