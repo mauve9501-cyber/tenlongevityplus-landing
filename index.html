@@ -86,7 +86,13 @@
   .cover{position:relative; padding:104px 0 92px; text-align:center; overflow:hidden;
     background:radial-gradient(ellipse at 50% -10%, rgba(1,90,194,0.55), transparent 60%);}
   .cover .eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-500); display:inline-block; margin-bottom:26px;}
-  .cover .wm-badge{width:clamp(112px,15vw,150px); height:auto; color:var(--gold-500); margin:0 auto 30px;}
+  .cover .ten-mark{position:relative; display:block; width:clamp(120px,15vw,156px); height:clamp(120px,15vw,156px); margin:0 auto 34px; padding:0; border:none; background:none; cursor:pointer; -webkit-tap-highlight-color:transparent;}
+  .cover .ten-mark .bar-h, .cover .ten-mark .bar-v{position:absolute; background:var(--ten-color,var(--gold-500)); border-radius:2px; transition:background .3s ease;}
+  .cover .ten-mark .bar-h{left:0; right:0; top:50%; height:4px; margin-top:-2px;}
+  .cover .ten-mark .bar-v{top:0; bottom:0; left:50%; width:4px; margin-left:-2px;}
+  .cover .ten-mark.spin{animation:tenSpin .9s cubic-bezier(0.25,0.1,0.25,1);}
+  .cover .ten-mark:focus-visible{outline:2px solid var(--gold-500); outline-offset:8px; border-radius:6px;}
+  @keyframes tenSpin{from{transform:rotate(0deg);} to{transform:rotate(360deg);}}
   .cover h1{font-family:var(--font-display); font-size:clamp(40px,6.6vw,72px); line-height:1.16; color:var(--ivory-100); margin-bottom:16px;}
   .cover h1 span{color:var(--gold-300);}
   .cover .sub{font-family:var(--font-serif); font-size:clamp(16px,2vw,20px); color:var(--gold-300); margin-bottom:26px; letter-spacing:0.02em;}
@@ -221,52 +227,7 @@
   <section class="cover">
     <div class="wrap">
       <span class="eyebrow">Ten Longevity Symbols · Reborn</span>
-      <svg class="wm-badge" viewBox="0 0 521.57 481.89" style="width:clamp(150px,20vw,300px); height:auto; display:block; color:var(--ivory-100);">
-<style type="text/css">
-	.mark-st0{fill:currentColor;}
-</style>
-<g>
-	<path class="mark-st0" d="M328.19,137.16V29.15c12.05,3.44,22.03,14.02,22.03,29.77h5.67c0-17.22-11.73-31.69-27.7-35.6V2.04H317.7
-		v137.79l0.27,0.07c9.58,7.9,15.09,20.09,15.09,33.75c0,23.76-16.85,46.3-41.95,46.3c-26.06,0-42.26-22.55-42.26-46.3
-		c0-18.07,10.37-33.56,26.16-39.95l3.39-1.19l5.78-1.68v-6.03c0-25.43-18.71-46.58-43.09-50.43c0.44-3.36,0.68-6.83,0.68-10.42
-		l0.04-47.74h37.8v-5.67h-85.89v5.67h37.31l-0.04,52.15c0,33-26,59.84-59,59.84v5.67c32.69,0,61.15-20.43,68.13-53.77
-		c19.63,3.87,32.72,23.66,32.72,44.7v0.61c-19.59,7.39-34.75,26.22-34.75,48.24c0,28.44,22.05,51.59,53.04,51.59
-		c30.43,0,53.01-23.14,53.01-51.59C344.12,159.41,337.89,146.5,328.19,137.16z"/>
-	<path class="mark-st0" d="M442.23,258.51h-10.49v58.12c0,47.11-34.99,77.31-77.31,77.31v5.67c40.8,0,76.91-19.88,85.74-70.57
-		c8.18-4.2,11.84-5.15,21.04-5.15c26.98,0,44.03,22.88,44.03,49.86c0,19.33-10.94,41.56-32.29,47.27l2.2,6.8
-		c25.06-6.7,40.87-32.66,40.87-57.35c0-29.8-21.32-54.15-52.98-54.15c-9.26,0-15.89,2.36-21.78,5.28
-		c0.65-5.61,0.99-11.55,0.99-17.86V258.51z"/>
-	<rect x="349.21" y="474.66" class="mark-st0" width="170.39" height="5.67"/>
-	<polygon class="mark-st0" points="318,331.79 280.77,331.79 280.77,337.46 318,337.46 318,480.22 328.5,480.22 328.5,257 318,257 	"/>
-	<path class="mark-st0" d="M190.18,437.05c0-23.31,18.03-38.89,37.85-38.89c32.1,0,44.63-14.93,44.63-38.16v-0.02
-		c0-13-15.13-27.74-29.3-27.74c15.17,0,29.46-14.25,29.57-29.38h0.01c0-0.07,0-0.13,0-0.2c0-0.03,0-0.06,0-0.09h0
-		c0-15.62-13.1-33.74-44.91-33.74l-39.14,0.01v5.67l40.87-0.01c19.28,0,32.41,10.8,32.41,28.19c0,17.63-16.83,26.47-33.17,26.54
-		c-0.04,0-0.08,0-0.12,0v0.01h-40.23v6.52h39.38c0.04,0,0.07,0,0.11,0c16.37,0.07,33.75,8.16,33.75,28.64v0.02
-		c0,13.82-10.63,27.25-28.28,27.25c-30.06,0-54.2,14.73-54.2,41.69c0,27.08,22.14,46.74,60.68,46.74h63.51v-7.09h-70.05
-		C206.87,473.01,190.26,453.41,190.18,437.05z"/>
-	<rect x="0.06" y="388.99" class="mark-st0" width="166.68" height="5.67"/>
-	<path class="mark-st0" d="M23.76,462.41l0-0.01c0-6.26,5.13-14.34,15.61-14.34h77.58c16.6,0,31.5-3.67,31.5-17.95h0
-		c0-0.01,0-0.02,0-0.03c0-0.02,0-0.04,0-0.07h-0.01c0-12.29-10.9-18.5-30.9-18.5L17.23,411.5v5.67h103.69
-		c9.5,0,16.77,5.33,17.04,12.91c0.02,6.33-5.12,11.46-15.75,11.46l-75.66,0.01c-25.67,0-33.28,8.78-33.28,20.85l0,0.01
-		c0,11.04,8.62,20.59,31.28,20.59h108.69v-7.09H40.83C30.16,475.92,23.76,468.77,23.76,462.41z"/>
-	<path class="mark-st0" d="M67.8,333.98l0.02-52.42H57.33l-0.02,51.25c0,15.5-10.57,33.5-23.57,33.52H17.23l0.08,5.76h15.05
-		c0.01,0,0.03,0,0.04,0h120.35l0-5.76H45.41C54.74,366.34,67.8,347.15,67.8,333.98z"/>
-	<path class="mark-st0" d="M154.74,267.47H26.88v5.87h98.84c-4.44,0-15.58,11.39-15.58,31.6l-0.02,52.78h10.49l0.02-52.07
-		c0-20.21,4.55-32.31,17.57-32.31h16.55V267.47z"/>
-	<path class="mark-st0" d="M521.65-0.9h-10.49v42.37c-6.72-10.83-18.79-18.99-30.57-19.19V-0.49l-10.77,0.18v122.38
-		c-28.36,0.11-52.81,23.2-52.81,51.59c0,28.44,21.2,51.59,53,51.59c34.69,0,50.95-22.27,51.56-49.97l0.07-0.02V-0.9z M470.02,219.95
-		c-27.14,0-42.23-22.55-42.23-46.3c0-23.76,18.48-44.51,42.23-44.51c3.14,0,7.62,0.35,10.58,0.99v-1.73v-5.52V27.95
-		c15.38,0.28,30.55,15.6,30.55,30.97h0.02v114.73h-0.04C511.12,197.41,497.25,219.95,470.02,219.95z"/>
-	<path class="mark-st0" d="M36.83,138.27l0,25.09c0,39.63,28.69,62.45,60.46,62.45c37.09,0,60.46-26.69,60.46-62.45v-17.62l0,0V-0.36
-		h-10.49v142.2h0l0,24.06c0,27.09-22.89,54.16-49.97,54.16c-24.57,0-45.44-18.77-49.11-45.65h81v-5.67H47.67
-		c-0.04-0.94-0.06-1.89-0.06-2.84l0-29.3c28.85-5.37,60.16-18.87,60.16-52.18c0-15.64-11.62-24.37-26.8-31.31
-		c8.52-9.45,11.43-21.72,11.43-36.2V5.17H81.9v16.9c0,29.6-17.69,46.03-81.77,46.03v6.52c39.89,0,63.48-6.32,76.81-17.62
-		c11.7,5.51,19.78,15.93,19.78,32.35c0,48.79-96.58,44.82-96.58,44.82v5.67C0.13,139.84,16.7,140.82,36.83,138.27z"/>
-	<path class="mark-st0" d="M454.83,84.55c0-23.43-15.66-28.86-25-33.43c6.73-8.32,11.12-19.61,11.12-34.91V5.17h-10.49v17.07
-		c0,52.38-70.04,45.89-70.04,45.89v5.67c0,0,43,4.22,66.16-19.07c6.29,2.71,18.76,10.92,18.76,33.38
-		c0,41.11-84.91,44.84-84.91,44.84v5.67C360.42,138.63,454.83,135.27,454.83,84.55z"/>
-</g>
-  </svg>
+      <button class="ten-mark" id="tenMark" type="button" title="클릭해 보세요" aria-label="십장생 플러스 심볼 — 클릭하면 색이 바뀝니다"><span class="bar-h"></span><span class="bar-v"></span></button>
       <h1>전통이 다시,<br><span>동화</span>가 되다</h1>
       <p class="sub">十長生, 오래된 상징을 오늘의 문법으로</p>
       <p class="lead">해·산·물·구름·돌·소나무·불로초·거북·학·사슴 — 장수와 안녕을 기원하던 십장생을, 오늘의 캐릭터와 이야기로 다시 그립니다.</p>
@@ -397,6 +358,32 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // 십장생 '+' 인터랙티브 마크 — 클릭할 때마다 색상 변화 (짙은 청색 배경에서 잘 보이는 브랜드 팔레트 순환)
+  (function(){
+    var ten = document.getElementById('tenMark');
+    if(!ten) return;
+    var palette = [
+      {hex:'#F8DE05', name:'치자색 · 황(黃)'},
+      {hex:'#E60012', name:'연지색 · 적(赤)'},
+      {hex:'#03BF8D', name:'대나무 초록'},
+      {hex:'#FF43B3', name:'자주색'},
+      {hex:'#F4EEDD', name:'고서 아이보리 · 백(白)'},
+      {hex:'#015AC2', name:'군청색 · 청(靑)'}
+    ];
+    var idx = 0;
+    ten.style.setProperty('--ten-color', palette[0].hex);
+    function cycle(){
+      idx = (idx + 1) % palette.length;
+      var c = palette[idx];
+      ten.classList.remove('spin');
+      void ten.offsetWidth;
+      ten.classList.add('spin');
+      ten.style.setProperty('--ten-color', c.hex);
+      ten.title = c.name;
+    }
+    ten.addEventListener('click', cycle);
+  })();
 </script>
 
 </body>
