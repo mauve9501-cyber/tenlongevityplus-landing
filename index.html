@@ -7,21 +7,22 @@
 <meta name="description" content="해·산·물·구름·돌·소나무·불로초·거북·학·사슴 — 십장생을 현대적 캐릭터와 동화적 세계관으로 재해석한 브랜드, 십장생 Plus. Instagram @tenlongevityplus.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Serif+KR:wght@500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Song+Myung&family=Noto+Serif+KR:wght@500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
   :root{
-    --ink:#1c2b3a;
-    --paper:#faf6ec;
-    --paper-2:#f1e8d4;
-    --navy:#22354a;
-    --navy-deep:#152233;
-    --gold:#d1993f;
-    --gold-deep:#a8752a;
-    --forest:#4b6b4f;
-    --red:#b8483f;
-    --line:#e6d9bd;
-    --white:#fffdf8;
+    /* 십장생 Plus 공식 브랜드 디자인 시스템 토큰 */
+    --ink:#231815;          /* 흑단색 EBONY — 밝은 배경 위 본문/제목 텍스트 */
+    --paper:#F4EEDD;        /* 고서 아이보리 SILK IVORY — 페이지 배경 & 어두운 배경 위 밝은 텍스트 */
+    --paper-2:#ECE0C4;      /* 아이보리 계열 짙은 톤 — 섹션 구분 배경 */
+    --brand:#004098;        /* 청색 DEEP BLUE — 브랜드 대표색, 어두운 배경/솔리드 도형 */
+    --brand-2:#015AC2;      /* 군청색 AZURITE BLUE — 보조 블루, 그라데이션·호버 */
+    --accent:#F8DE05;       /* 치자색 GARDENIA YELLOW — 장식 포인트, CTA 배경 */
+    --accent-ink:#7A6600;   /* 치자색 파생 저채도 톤 — 밝은 배경 위 텍스트용(대비 확보) */
+    --forest:#149243;       /* 짙은 녹색 FOREST GREEN — 확장 팔레트 */
+    --red:#E60012;          /* 연지색 CARMINE — 확장 팔레트, 강조 */
+    --line:#e6dcc4;
+    --white:#fffbf0;
     --max:1080px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -33,96 +34,96 @@
     line-height:1.7;
     overflow-x:hidden;
   }
-  ::selection{background:var(--gold); color:var(--white);}
-  h1,h2,h3{font-family:"Do Hyeon","Noto Serif KR",serif; font-weight:400; letter-spacing:-0.01em;}
+  ::selection{background:var(--accent); color:var(--ink);}
+  h1,h2,h3{font-family:"Song Myung","Noto Serif KR",serif; font-weight:400; letter-spacing:-0.01em;}
   a{color:inherit; text-decoration:none;}
   img,svg{max-width:100%; display:block;}
   .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
   .eyebrow{
     font-size:12.5px; letter-spacing:0.24em; text-transform:uppercase;
-    color:var(--gold-deep); font-weight:700; display:flex; align-items:center; justify-content:center; gap:10px;
+    color:var(--accent-ink); font-weight:700; display:flex; align-items:center; justify-content:center; gap:10px;
   }
-  .eyebrow::before, .eyebrow::after{content:""; width:20px; height:1px; background:var(--gold);}
+  .eyebrow::before, .eyebrow::after{content:""; width:20px; height:1px; background:var(--accent);}
 
   /* NAV */
-  header.nav{position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,246,236,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  header.nav{position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(244,238,221,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
   .nav-inner{max-width:var(--max); margin:0 auto; padding:14px 28px; display:flex; align-items:center; justify-content:space-between;}
-  .brandmark{display:flex; align-items:center; gap:10px; font-family:"Do Hyeon",serif; font-size:19px; color:var(--navy-deep);}
+  .brandmark{display:flex; align-items:center; gap:10px; font-family:"Song Myung",serif; font-size:19px; color:var(--ink);}
   .brandmark svg{width:30px; height:30px;}
-  .nav-cta{font-size:13.5px; font-weight:700; padding:9px 18px; border-radius:999px; background:var(--navy-deep); color:var(--white);}
-  .nav-cta:hover{background:var(--gold-deep);}
+  .nav-cta{font-size:13.5px; font-weight:700; padding:9px 18px; border-radius:999px; background:var(--brand); color:var(--paper);}
+  .nav-cta:hover{background:var(--brand-2);}
 
   /* HERO */
   .hero{position:relative; padding:170px 0 90px; text-align:center; overflow:hidden; background:
-    radial-gradient(ellipse at 20% 0%, rgba(75,107,79,0.10), transparent 55%),
-    radial-gradient(ellipse at 85% 10%, rgba(209,153,63,0.16), transparent 55%);
+    radial-gradient(ellipse at 20% 0%, rgba(20,146,67,0.10), transparent 55%),
+    radial-gradient(ellipse at 85% 10%, rgba(248,222,5,0.18), transparent 55%);
   }
-  .hero-badge{width:132px; height:132px; margin:0 auto 30px; border-radius:50%; background:radial-gradient(circle at 35% 30%, var(--navy), var(--navy-deep)); display:flex; align-items:center; justify-content:center; position:relative; box-shadow:0 14px 34px rgba(21,34,51,0.25);}
+  .hero-badge{width:132px; height:132px; margin:0 auto 30px; border-radius:50%; background:radial-gradient(circle at 35% 30%, var(--brand-2), var(--brand)); display:flex; align-items:center; justify-content:center; position:relative; box-shadow:0 14px 34px rgba(0,64,152,0.28);}
   .hero-badge svg{width:76px; height:76px;}
-  .hero h1{font-size:clamp(40px,7vw,68px); color:var(--navy-deep); margin-bottom:18px;}
-  .hero h1 span{color:var(--gold-deep);}
+  .hero h1{font-size:clamp(40px,7vw,68px); color:var(--ink); margin-bottom:18px;}
+  .hero h1 span{color:var(--accent-ink);}
   .hero p.lead{max-width:520px; margin:0 auto 34px; font-size:17px; color:#4b4436;}
   .hero-tags{display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-bottom:40px;}
-  .tag{font-size:12.5px; padding:7px 14px; border:1px solid var(--line); border-radius:999px; background:var(--white); color:var(--navy-deep); font-weight:600;}
+  .tag{font-size:12.5px; padding:7px 14px; border:1px solid var(--line); border-radius:999px; background:var(--white); color:var(--ink); font-weight:600;}
   .btn-row{display:flex; flex-wrap:wrap; justify-content:center; gap:14px;}
   .btn{display:inline-flex; align-items:center; gap:9px; padding:15px 28px; font-size:15px; font-weight:700; border-radius:999px; transition:transform .15s ease, box-shadow .15s ease;}
   .btn svg{width:19px; height:19px;}
-  .btn.primary{background:linear-gradient(135deg,#e0973d,#c97a2a); color:var(--white); box-shadow:0 10px 24px rgba(201,122,42,0.35);}
+  .btn.primary{background:var(--accent); color:var(--brand); box-shadow:0 10px 24px rgba(122,102,0,0.28);}
   .btn.primary:hover{transform:translateY(-2px);}
-  .btn.ghost{background:var(--white); color:var(--navy-deep); border:1.5px solid var(--line);}
-  .btn.ghost:hover{border-color:var(--navy-deep);}
+  .btn.ghost{background:var(--white); color:var(--ink); border:1.5px solid var(--line);}
+  .btn.ghost:hover{border-color:var(--brand);}
   .stat-row{display:flex; justify-content:center; gap:36px; margin-top:46px; flex-wrap:wrap;}
-  .stat b{display:block; font-family:"Do Hyeon",serif; font-size:26px; color:var(--navy-deep);}
+  .stat b{display:block; font-family:"Song Myung",serif; font-size:26px; color:var(--ink);}
   .stat span{font-size:12.5px; color:#8a8069; letter-spacing:0.05em;}
 
   section{padding:88px 0;}
   .section-head{text-align:center; max-width:600px; margin:0 auto 52px;}
-  .section-head h2{font-size:clamp(28px,4vw,38px); margin-top:14px; color:var(--navy-deep);}
+  .section-head h2{font-size:clamp(28px,4vw,38px); margin-top:14px; color:var(--ink);}
   .section-head p{margin-top:16px; color:#5a5148; font-size:15.5px;}
 
   /* STORY */
   .story{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--white);}
   .story .wrap{max-width:760px; text-align:center;}
   .story p{font-size:16.5px; color:#3c362f; margin-bottom:18px;}
-  .story p.big{font-family:"Noto Serif KR",serif; font-weight:600; font-size:21px; color:var(--navy-deep); line-height:1.6; margin-bottom:26px;}
+  .story p.big{font-family:"Noto Serif KR",serif; font-weight:600; font-size:21px; color:var(--ink); line-height:1.6; margin-bottom:26px;}
 
   /* SYMBOLS GRID */
   .symbols{background:var(--paper-2);}
   .sym-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
   .sym-card{background:var(--white); border:1px solid var(--line); border-radius:16px; padding:22px 10px; text-align:center; transition:transform .15s ease, box-shadow .15s ease;}
-  .sym-card:hover{transform:translateY(-4px); box-shadow:0 12px 24px rgba(28,43,58,0.08);}
+  .sym-card:hover{transform:translateY(-4px); box-shadow:0 12px 24px rgba(0,64,152,0.10);}
   .sym-card .ic{width:46px; height:46px; margin:0 auto 12px;}
-  .sym-card .ic svg{width:100%; height:100%; stroke:var(--navy-deep);}
-  .sym-card h4{font-size:15.5px; font-weight:700; color:var(--navy-deep); font-family:"Pretendard",sans-serif;}
+  .sym-card .ic svg{width:100%; height:100%; stroke:var(--brand);}
+  .sym-card h4{font-size:15.5px; font-weight:700; color:var(--ink); font-family:"Pretendard",sans-serif;}
   .sym-card span{font-size:11px; color:#9a8f77; letter-spacing:0.04em;}
 
   /* WORLD / UNIVERSE */
   .universe{background:var(--white);}
   .uni-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px;}
   .uni-card{border:1px solid var(--line); border-radius:20px; padding:30px 26px; position:relative; overflow:hidden; background:var(--paper);}
-  .uni-card .tagline{font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-deep); font-weight:700; margin-bottom:12px;}
-  .uni-card h4{font-family:"Do Hyeon",serif; font-size:22px; color:var(--navy-deep); margin-bottom:10px;}
+  .uni-card .tagline{font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-ink); font-weight:700; margin-bottom:12px;}
+  .uni-card h4{font-family:"Song Myung",serif; font-size:22px; color:var(--ink); margin-bottom:10px;}
   .uni-card p{font-size:14px; color:#5a5148;}
-  .uni-card .ic{width:50px; height:50px; border-radius:50%; background:var(--navy-deep); display:flex; align-items:center; justify-content:center; margin-bottom:16px;}
-  .uni-card .ic svg{width:26px; height:26px; stroke:var(--gold);}
+  .uni-card .ic{width:50px; height:50px; border-radius:50%; background:var(--brand); display:flex; align-items:center; justify-content:center; margin-bottom:16px;}
+  .uni-card .ic svg{width:26px; height:26px; stroke:var(--accent);}
 
   /* FEED CTA */
-  .feed{background:var(--navy-deep); color:var(--paper); text-align:center;}
-  .feed .eyebrow{color:var(--gold);}
-  .feed .eyebrow::before,.feed .eyebrow::after{background:var(--gold);}
-  .feed h2{color:var(--white); margin-top:14px; font-size:clamp(26px,4vw,36px);}
-  .feed p{color:#c7bfa9; max-width:480px; margin:16px auto 36px; font-size:15.5px;}
+  .feed{background:var(--brand); color:var(--paper); text-align:center;}
+  .feed .eyebrow{color:var(--accent);}
+  .feed .eyebrow::before,.feed .eyebrow::after{background:var(--accent);}
+  .feed h2{color:var(--paper); margin-top:14px; font-size:clamp(26px,4vw,36px);}
+  .feed p{color:#c7d3e6; max-width:480px; margin:16px auto 36px; font-size:15.5px;}
   .feed-stats{display:flex; justify-content:center; gap:40px; margin-bottom:40px; flex-wrap:wrap;}
-  .feed-stats .stat b{color:var(--white);}
-  .feed-stats .stat span{color:#9d9276;}
+  .feed-stats .stat b{color:var(--paper);}
+  .feed-stats .stat span{color:#a9bcd8;}
   .feed .btn.primary{box-shadow:0 10px 30px rgba(0,0,0,0.35);}
-  .feed .btn.ghost{background:transparent; color:var(--white); border-color:#3d4d5f;}
-  .feed .btn.ghost:hover{border-color:var(--gold);}
+  .feed .btn.ghost{background:transparent; color:var(--paper); border-color:rgba(244,238,221,0.32);}
+  .feed .btn.ghost:hover{border-color:var(--accent);}
 
   /* LINK BACK */
   .linkback{background:var(--paper); text-align:center; padding:60px 0;}
   .linkback p{font-size:14.5px; color:#8a8069; margin-bottom:10px;}
-  .linkback a{font-weight:700; color:var(--navy-deep); border-bottom:1.5px solid var(--gold);}
+  .linkback a{font-weight:700; color:var(--ink); border-bottom:1.5px solid var(--accent);}
 
   footer{padding:34px 0; text-align:center; font-size:12.5px; color:#a49a80; background:var(--paper);}
 
@@ -140,7 +141,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="#top" class="brandmark">
-      <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#d1993f" stroke-width="1.6"/><circle cx="20" cy="20" r="7" fill="#22354a"/><circle cx="20" cy="9" r="2.2" fill="#d1993f"/><circle cx="31" cy="20" r="2.2" fill="#d1993f"/><circle cx="20" cy="31" r="2.2" fill="#d1993f"/><circle cx="9" cy="20" r="2.2" fill="#d1993f"/></svg>
+      <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#F8DE05" stroke-width="1.6"/><circle cx="20" cy="20" r="7" fill="#004098"/><circle cx="20" cy="9" r="2.2" fill="#F8DE05"/><circle cx="31" cy="20" r="2.2" fill="#F8DE05"/><circle cx="20" cy="31" r="2.2" fill="#F8DE05"/><circle cx="9" cy="20" r="2.2" fill="#F8DE05"/></svg>
       십장생 Plus
     </a>
     <a class="nav-cta" href="https://www.instagram.com/tenlongevityplus/" target="_blank" rel="noopener">Instagram 팔로우</a>
@@ -153,7 +154,7 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-badge">
-        <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="46" stroke="#d1993f" stroke-width="1.6"/><circle cx="50" cy="20" r="3.2" fill="#d1993f"/><circle cx="76" cy="35" r="3.2" fill="#d1993f"/><circle cx="76" cy="65" r="3.2" fill="#d1993f"/><circle cx="50" cy="80" r="3.2" fill="#d1993f"/><circle cx="24" cy="65" r="3.2" fill="#d1993f"/><circle cx="24" cy="35" r="3.2" fill="#d1993f"/><path d="M35 55 Q50 35 65 55 Q57 62 50 58 Q43 62 35 55 Z" fill="#faf6ec"/><circle cx="43" cy="52" r="2" fill="#22354a"/><circle cx="57" cy="52" r="2" fill="#22354a"/></svg>
+        <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="46" stroke="#F8DE05" stroke-width="1.6"/><circle cx="50" cy="20" r="3.2" fill="#F8DE05"/><circle cx="76" cy="35" r="3.2" fill="#F8DE05"/><circle cx="76" cy="65" r="3.2" fill="#F8DE05"/><circle cx="50" cy="80" r="3.2" fill="#F8DE05"/><circle cx="24" cy="65" r="3.2" fill="#F8DE05"/><circle cx="24" cy="35" r="3.2" fill="#F8DE05"/><path d="M35 55 Q50 35 65 55 Q57 62 50 58 Q43 62 35 55 Z" fill="#F4EEDD"/><circle cx="43" cy="52" r="2" fill="#004098"/><circle cx="57" cy="52" r="2" fill="#004098"/></svg>
       </div>
       <div class="eyebrow">Ten Longevity Symbols · Reborn</div>
       <h1>전통이 다시,<br><span>동화</span>가 되다</h1>
