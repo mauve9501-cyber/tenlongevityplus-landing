@@ -129,8 +129,9 @@
   .sym-card:hover{transform:translateY(-3px); box-shadow:0 12px 24px rgba(0,0,0,0.22);}
   .sym-card .ic{width:78px; height:78px; margin:0 auto 12px;}
   .sym-card .ic .sym-svg{width:100%; height:100%; display:block;}
-  .sym-card h4{font-family:var(--font-serif); font-size:15.5px; color:var(--ink); line-height:1.1; margin-bottom:0;}
-  .sym-card span{font-family:var(--font-mono); font-size:10.5px; color:#8A7F74; letter-spacing:0.06em; line-height:1.1;}
+  .sym-card .sym-name{display:flex; align-items:baseline; justify-content:center; gap:7px;}
+  .sym-card h4{font-family:var(--font-serif); font-size:15.5px; color:var(--ink); line-height:1.1; margin:0;}
+  .sym-card .sym-name span{font-family:var(--font-serif); font-size:12px; color:#8A7F74; line-height:1.1;}
 
   /* ---------- universe (light panel) ---------- */
   .uni-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
@@ -280,7 +281,7 @@
           <circle class="sun-st0" cx="297.71" cy="297.75" r="297.64"/>
           <path class="sun-st1" d="M455.9,297.64c0.06,87.46-70.85,158.36-158.31,158.3c-86-0.06-158.02-72.09-158.09-158.08
 	c-0.06-87.47,70.86-158.38,158.32-158.31C383.83,139.62,455.85,211.65,455.9,297.64z"/>
-        </svg></div><h4>해</h4><span>日</span></div>
+        </svg></div><div class="sym-name"><h4>해</h4><span>日</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
 <style type="text/css">
 	.mtn-st0{fill:#003F8D;}
@@ -357,7 +358,7 @@
 			c-12.09,0-22.55,6.95-27.62,17.07L309.04,383.26z"/>
 	</g>
 </g>
-        </svg></div><h4>산</h4><span>山</span></div>
+        </svg></div><div class="sym-name"><h4>산</h4><span>山</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
 <style type="text/css">
 	.water-st0{fill:#004098;}
@@ -968,7 +969,7 @@
 	</g>
 	<path class="water-st7" d="M404.2,482.57c0-22.89-18.56-41.45-41.46-41.45h-0.27c-22.9,0-41.46,18.56-41.46,41.45H404.2z"/>
 </g>
-        </svg></div><h4>물</h4><span>水</span></div>
+        </svg></div><div class="sym-name"><h4>물</h4><span>水</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
 <style type="text/css">
 	.stone-st0{fill:#004098;}
@@ -1094,7 +1095,7 @@
 	<path class="stone-st9" d="M234.09,149.09c0,1.13-0.97,2.05-2.18,2.05c-1.2,0-2.17-0.91-2.17-2.05c0-1.13,0.97-2.05,2.17-2.05
 		C233.12,147.04,234.09,147.96,234.09,149.09z"/>
 </g>
-        </svg></div><h4>돌</h4><span>石</span></div>
+        </svg></div><div class="sym-name"><h4>돌</h4><span>石</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
 <style type="text/css">
 	.cloud-st0{fill:#003F8D;}
@@ -1176,7 +1177,7 @@
 		c-3.27,11.53-15.27,18.25-26.82,14.97C341.34,358.08,334.64,346.08,337.91,334.54z"/>
 </g>
 <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -92.7525 187.4181)" class="cloud-st9" cx="179.86" cy="205.67" rx="62.77" ry="62.77"/>
-        </svg></div><h4>구름</h4><span>雲</span></div>
+        </svg></div><div class="sym-name"><h4>구름</h4><span>雲</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
 <style type="text/css">
 	.pine-st0{fill:#004098;}
@@ -1387,7 +1388,7 @@
 	<path class="pine-st6" d="M350.85,189.41c0.22,2.72,2.6,4.75,5.33,4.53c2.72-0.22,4.75-2.6,4.53-5.33c-0.22-2.72-2.6-4.75-5.33-4.53
 		C352.66,184.31,350.63,186.69,350.85,189.41z"/>
 </g>
-        </svg></div><h4>소나무</h4><span>松</span></div>
+        </svg></div><div class="sym-name"><h4>소나무</h4><span>松</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
 <style type="text/css">
 	.herb-st0{fill:#004098;}
@@ -1484,7 +1485,7 @@
 </linearGradient>
 <path class="herb-st12" d="M445.24,429.41c-31.2,31.2-71.45,46.19-107.85,43.81c-2.39-36.41,12.6-76.65,43.81-107.86
 	c31.2-31.2,71.45-46.2,107.86-43.81C491.44,357.96,476.45,398.21,445.24,429.41z"/>
-        </svg></div><h4>불로초</h4><span>不老草</span></div>
+        </svg></div><div class="sym-name"><h4>불로초</h4><span>不老草</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
 <style type="text/css">
 	.turtle-st0{fill:#003F8D;}
@@ -1869,7 +1870,7 @@
 			C356.35,97.5,358.71,95.15,361.62,95.15z"/>
 	</g>
 </g>
-        </svg></div><h4>거북</h4><span>龜</span></div>
+        </svg></div><div class="sym-name"><h4>거북</h4><span>龜</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
 <style type="text/css">
 	.crane-st0{fill:#004098;}
@@ -1928,7 +1929,7 @@
 	<path class="crane-st5" d="M427.89,185.79c-5.61,2.59-12.78,4.14-20.59,4.14c-7.92,0-15.18-1.6-20.82-4.25L427.89,185.79z"/>
 	<path class="crane-st5" d="M427.89,185.74c-5.61-3.49-12.78-5.58-20.59-5.58c-7.92,0-15.18,2.15-20.82,5.72L427.89,185.74z"/>
 </g>
-        </svg></div><h4>학</h4><span>鶴</span></div>
+        </svg></div><div class="sym-name"><h4>학</h4><span>鶴</span></div></div>
         <div class="sym-card"><div class="ic"><svg class="sym-svg" viewBox="0 0 595.28 595.28" style="width:120px; height:120px;">
           <style>.deer-st0{fill:#004098;}.deer-st1{fill:#C9CACA;}.deer-st2{fill:#F0842A;}.deer-st3{fill:#FFFFFF;}.deer-st4{fill:#B05F18;}</style>
           <circle class="deer-st0" cx="297.64" cy="297.64" r="297.64"/>
@@ -1975,7 +1976,7 @@
           <path class="deer-st4" d="M394.19,336.31c0,6.75-5.65,12.23-12.63,12.23c-6.97,0-12.63-5.47-12.63-12.23"/>
           <rect x="236.44" y="261.97" width="19.8" height="2.18"/>
           </g>
-        </svg></div><h4>사슴</h4><span>鹿</span></div>
+        </svg></div><div class="sym-name"><h4>사슴</h4><span>鹿</span></div></div>
       </div>
     </div>
   </section>
