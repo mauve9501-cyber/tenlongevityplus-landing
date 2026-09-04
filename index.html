@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>십장생 Plus | 전통이 다시 태어나는 이야기</title>
-<meta name="description" content="해·산·물·구름·돌·소나무·불로초·거북·학·사슴 — 십장생을 현대적 캐릭터와 동화적 세계관으로 재해석한 브랜드, 십장생 Plus. Instagram @tenlongevityplus.">
+<title>십장생 Plus | 십장생, 다시 이야기가 되다</title>
+<meta name="description" content="해·산·물·돌·구름·소나무·불로초·거북·학·사슴 — 십장생을 현대적 캐릭터와 동화적 세계관으로 재해석한 브랜드, 십장생 Plus. Instagram @tenlongevityplus.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Song+Myung&family=Noto+Serif+KR:wght@500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
   h1,h2,h3{font-family:"Song Myung","Noto Serif KR",serif; font-weight:400; letter-spacing:-0.01em;}
   a{color:inherit; text-decoration:none;}
   img,svg{max-width:100%; display:block;}
-  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px; position:relative;}
   .eyebrow{
     font-size:12.5px; letter-spacing:0.24em; text-transform:uppercase;
     color:var(--accent-ink); font-weight:700; display:flex; align-items:center; justify-content:center; gap:10px;
@@ -54,25 +54,42 @@
   .nav-cta:hover{background:var(--brand-2);}
 
   /* HERO */
-  .hero{position:relative; padding:170px 0 90px; text-align:center; overflow:hidden; background:
-    radial-gradient(ellipse at 20% 0%, rgba(20,146,67,0.10), transparent 55%),
-    radial-gradient(ellipse at 85% 10%, rgba(248,222,5,0.18), transparent 55%);
+  .hero{position:relative; padding:172px 0 96px; text-align:center; overflow:hidden; background:
+    radial-gradient(ellipse at 18% 0%, rgba(20,146,67,0.08), transparent 55%),
+    radial-gradient(ellipse at 85% 6%, rgba(248,222,5,0.16), transparent 55%);
   }
-  .hero-badge{width:132px; height:132px; margin:0 auto 30px; border-radius:50%; background:radial-gradient(circle at 35% 30%, var(--brand-2), var(--brand)); display:flex; align-items:center; justify-content:center; position:relative; box-shadow:0 14px 34px rgba(0,64,152,0.28);}
-  .hero-badge svg{width:76px; height:76px;}
-  .hero h1{font-size:clamp(40px,7vw,68px); color:var(--ink); margin-bottom:18px;}
+  .hero .wrap{z-index:1;}
+  .hero::before{
+    content:"十"; position:absolute; top:-64px; left:50%; transform:translateX(-50%);
+    font-family:"Song Myung",serif; font-size:min(58vw,560px); line-height:1; color:var(--brand); opacity:.045; z-index:0; pointer-events:none;
+  }
+
+  /* HERO RING — 십장생 열 상징 아이콘이 중심 엠블럼을 둘러싸는 구성 */
+  .hero-ring{--r:132px; position:relative; width:296px; height:296px; margin:0 auto 34px;}
+  .ring-center{position:absolute; inset:0; margin:auto; width:112px; height:112px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--brand-2), var(--brand)); box-shadow:0 16px 36px rgba(0,64,152,0.30);
+    display:flex; align-items:center; justify-content:center;}
+  .ring-center span{font-family:"Song Myung",serif; font-size:44px; color:var(--paper); line-height:1;}
+  .ring-item{position:absolute; top:50%; left:50%; width:44px; height:44px; margin:-22px;
+    border-radius:50%; background:var(--white); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    transform:rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));}
+  .ring-item svg{width:22px; height:22px; stroke:var(--brand);}
+
+  .hero .eyebrow{position:relative; z-index:1;}
+  .hero h1{position:relative; z-index:1; font-size:clamp(38px,6.4vw,60px); line-height:1.18; color:var(--ink); margin-bottom:22px;}
   .hero h1 span{color:var(--accent-ink);}
-  .hero p.lead{max-width:520px; margin:0 auto 34px; font-size:17px; color:#4b4436;}
-  .hero-tags{display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-bottom:40px;}
+  .hero p.lead{position:relative; z-index:1; max-width:540px; margin:0 auto 34px; font-size:16.5px; color:#4b4436;}
+  .hero-tags{position:relative; z-index:1; display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-bottom:40px;}
   .tag{font-size:12.5px; padding:7px 14px; border:1px solid var(--line); border-radius:999px; background:var(--white); color:var(--ink); font-weight:600;}
-  .btn-row{display:flex; flex-wrap:wrap; justify-content:center; gap:14px;}
+  .btn-row{position:relative; z-index:1; display:flex; flex-wrap:wrap; justify-content:center; gap:14px;}
   .btn{display:inline-flex; align-items:center; gap:9px; padding:15px 28px; font-size:15px; font-weight:700; border-radius:999px; transition:transform .15s ease, box-shadow .15s ease;}
   .btn svg{width:19px; height:19px;}
   .btn.primary{background:var(--accent); color:var(--brand); box-shadow:0 10px 24px rgba(122,102,0,0.28);}
   .btn.primary:hover{transform:translateY(-2px);}
   .btn.ghost{background:var(--white); color:var(--ink); border:1.5px solid var(--line);}
   .btn.ghost:hover{border-color:var(--brand);}
-  .stat-row{display:flex; justify-content:center; gap:36px; margin-top:46px; flex-wrap:wrap;}
+  .stat-row{position:relative; z-index:1; display:flex; justify-content:center; gap:36px; margin-top:46px; flex-wrap:wrap;}
   .stat b{display:block; font-family:"Song Myung",serif; font-size:26px; color:var(--ink);}
   .stat span{font-size:12.5px; color:#8a8069; letter-spacing:0.05em;}
 
@@ -130,6 +147,13 @@
   @media (max-width:760px){
     .sym-grid{grid-template-columns:repeat(3,1fr);}
   }
+  @media (max-width:560px){
+    .hero-ring{--r:98px; width:230px; height:230px;}
+    .ring-center{width:88px; height:88px;}
+    .ring-center span{font-size:34px;}
+    .ring-item{width:38px; height:38px; margin:-19px;}
+    .ring-item svg{width:19px; height:19px;}
+  }
   @media (max-width:480px){
     .sym-grid{grid-template-columns:repeat(2,1fr);}
     .stat-row{gap:24px;}
@@ -153,16 +177,26 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <div class="hero-badge">
-        <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="46" stroke="#F8DE05" stroke-width="1.6"/><circle cx="50" cy="20" r="3.2" fill="#F8DE05"/><circle cx="76" cy="35" r="3.2" fill="#F8DE05"/><circle cx="76" cy="65" r="3.2" fill="#F8DE05"/><circle cx="50" cy="80" r="3.2" fill="#F8DE05"/><circle cx="24" cy="65" r="3.2" fill="#F8DE05"/><circle cx="24" cy="35" r="3.2" fill="#F8DE05"/><path d="M35 55 Q50 35 65 55 Q57 62 50 58 Q43 62 35 55 Z" fill="#F4EEDD"/><circle cx="43" cy="52" r="2" fill="#004098"/><circle cx="57" cy="52" r="2" fill="#004098"/></svg>
+      <div class="hero-ring">
+        <div class="ring-center"><span>十</span></div>
+        <div class="ring-item" style="--a:0deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><circle cx="20" cy="20" r="10"/><line x1="20" y1="4" x2="20" y2="9"/><line x1="20" y1="31" x2="20" y2="36"/><line x1="4" y1="20" x2="9" y2="20"/><line x1="31" y1="20" x2="36" y2="20"/></svg></div>
+        <div class="ring-item" style="--a:36deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M6 30 L16 12 L22 22 L27 14 L34 30 Z"/></svg></div>
+        <div class="ring-item" style="--a:72deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M4 22 Q10 16 16 22 T28 22 T36 22"/><path d="M4 30 Q10 24 16 30 T28 30 T36 30"/></svg></div>
+        <div class="ring-item" style="--a:108deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M10 26 Q6 26 6 21 Q6 16 11 16 Q12 10 19 10 Q26 10 27 17 Q33 17 33 23 Q33 28 27 28 Z"/></svg></div>
+        <div class="ring-item" style="--a:144deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><ellipse cx="20" cy="24" rx="14" ry="9"/><ellipse cx="20" cy="24" rx="7" ry="4.5"/></svg></div>
+        <div class="ring-item" style="--a:180deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M20 4 L28 16 L23 16 L30 26 L24 26 L24 36 L16 36 L16 26 L10 26 L17 16 L12 16 Z"/></svg></div>
+        <div class="ring-item" style="--a:216deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M20 34 C20 22 12 22 12 14 C12 9 16 6 20 10 C24 6 28 9 28 14 C28 22 20 22 20 34 Z"/></svg></div>
+        <div class="ring-item" style="--a:252deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><ellipse cx="20" cy="23" rx="13" ry="9"/><path d="M9 20 Q5 18 4 12 Q9 12 11 17"/><circle cx="20" cy="23" r="3"/></svg></div>
+        <div class="ring-item" style="--a:288deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M20 8 C13 8 9 14 9 20 C9 27 14 33 20 33 C26 33 31 27 31 20 C31 14 27 8 20 8 Z" transform="rotate(35 20 20)"/><circle cx="26" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+        <div class="ring-item" style="--a:324deg"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><path d="M12 30 L12 18 L20 8 L28 18 L28 30" /><line x1="12" y1="30" x2="28" y2="30"/><path d="M14 12 L11 6 M26 12 L29 6"/></svg></div>
       </div>
       <div class="eyebrow">Ten Longevity Symbols · Reborn</div>
-      <h1>전통이 다시,<br><span>동화</span>가 되다</h1>
-      <p class="lead">해·산·물·구름·돌·소나무·불로초·거북·학·사슴 — 장수와 안녕을 기원하던 십장생을, 오늘의 캐릭터와 이야기로 다시 그립니다.</p>
+      <h1>십장생<span>(十長生)</span>,<br>다시 이야기가 되다</h1>
+      <p class="lead">해(日)·산(山)·물(水)·돌(石)·구름(雲)·소나무(松)·불로초(不老草)·거북(龜)·학(鶴)·사슴(鹿) — 오래도록 장수와 안녕을 기원해온 열 가지 상징이, 오늘의 캐릭터와 패턴으로 다시 그려진다.</p>
       <div class="hero-tags">
-        <span class="tag">전통 문양 재해석</span>
+        <span class="tag">전통 문양의 재해석</span>
         <span class="tag">캐릭터 · 굿즈</span>
-        <span class="tag">동화 세계관</span>
+        <span class="tag">동화적 세계관</span>
         <span class="tag">십이지신 · 바이크월드</span>
       </div>
       <div class="btn-row">
@@ -187,9 +221,9 @@
   <section class="story">
     <div class="wrap">
       <div class="eyebrow">Story</div>
-      <p class="big" style="margin-top:18px;">오래도록 전해 내려온 열 가지 상징에, 오늘의 이야기를 더합니다.</p>
-      <p>십장생(十長生)은 해·산·물·돌·구름·소나무·불로초·거북·학·사슴 열 가지로 장수와 평안을 기원해온 한국의 전통 상징입니다. 십장생 Plus는 이 오래된 문양을 편집디자인·브랜드 아이덴티티 전문가 박미영(d·mauve)의 시선으로 다시 그려, 현대적인 캐릭터와 패턴, 그리고 동화적 세계관으로 확장한 개인 브랜드입니다.</p>
-      <p>십이지신 캐릭터, 숲속 친구들이 사는 &ldquo;동화나라&rdquo;, 캐릭터 브랜드 Spoky가 등장하는 &ldquo;바이크월드&rdquo;까지 — 하나의 세계관 아래 계속 자라나는 이야기를 Instagram과 굿즈로 만나보실 수 있습니다.</p>
+      <p class="big" style="margin-top:18px;">열 가지 상징에, 오늘의 시선을 더한다.</p>
+      <p>십장생(十長生)은 해·산·물·돌·구름·소나무·불로초·거북·학·사슴 열 가지로 장수와 평안을 기원해온 한국의 전통 상징이다. 십장생 Plus는 이 오래된 문양을 편집디자인·브랜드 아이덴티티 전문가 박미영(d·mauve)의 시선으로 다시 그려, 현대적인 캐릭터와 패턴, 그리고 동화적 세계관으로 확장한 개인 브랜드다.</p>
+      <p>십이지신 캐릭터, 숲속 친구들이 사는 &ldquo;동화나라&rdquo;, 캐릭터 브랜드 Spoky가 등장하는 &ldquo;바이크월드&rdquo;까지 — 하나의 세계관 아래 계속 자라나는 이야기가 Instagram과 굿즈로 이어진다.</p>
     </div>
   </section>
 
@@ -199,7 +233,7 @@
       <div class="section-head">
         <div class="eyebrow">The Ten Symbols</div>
         <h2>십장생, 열 가지 이야기</h2>
-        <p>각각의 상징은 하나의 캐릭터이자 패턴이 되어 십장생 Plus의 세계를 이룹니다.</p>
+        <p>상징 하나하나가 캐릭터이자 패턴이 되어 십장생 Plus의 세계를 이룬다.</p>
       </div>
       <div class="sym-grid">
         <div class="sym-card"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6"><circle cx="20" cy="20" r="10"/><line x1="20" y1="4" x2="20" y2="9"/><line x1="20" y1="31" x2="20" y2="36"/><line x1="4" y1="20" x2="9" y2="20"/><line x1="31" y1="20" x2="36" y2="20"/></svg></div><h4>해</h4><span>SUN</span></div>
@@ -222,26 +256,26 @@
       <div class="section-head">
         <div class="eyebrow">The Universe</div>
         <h2>십장생 Plus의 세계</h2>
-        <p>십장생을 중심으로 계속 자라나는 캐릭터와 이야기들입니다.</p>
+        <p>십장생을 중심으로 계속 자라나는 캐릭터와 이야기다.</p>
       </div>
       <div class="uni-grid">
         <div class="uni-card">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 20 L4 10 L12 4 L20 10 L20 20 Z"/><circle cx="12" cy="14" r="2.4"/></svg></div>
           <div class="tagline">Fairytale World</div>
           <h4>동화나라</h4>
-          <p>숲속에 사는 나무 인형 친구들이 들려주는, 십장생 세계관 속 짧은 동화 이야기.</p>
+          <p>숲속 나무 인형 친구들이 들려주는, 십장생 세계관 속 짧은 동화다.</p>
         </div>
         <div class="uni-card">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M6 20 Q6 14 12 14 Q18 14 18 20"/></svg></div>
           <div class="tagline">Zodiac Characters</div>
           <h4>십이지신</h4>
-          <p>열두 띠 동물을 십장생과 같은 톤으로 그려낸 캐릭터 시리즈.</p>
+          <p>열두 띠 동물을 십장생과 같은 톤으로 그려낸 캐릭터 시리즈다.</p>
         </div>
         <div class="uni-card">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="7" cy="18" r="3"/><circle cx="17" cy="18" r="3"/><path d="M7 18 L11 8 L15 8 L17 18 M11 8 L9 12 L15 12"/></svg></div>
           <div class="tagline">Character Branding</div>
           <h4>바이크월드 · Spoky</h4>
-          <p>부엉이 캐릭터 Spoky가 안내하는 라이프스타일·모빌리티 브랜드 콘텐츠.</p>
+          <p>부엉이 캐릭터 Spoky가 안내하는 라이프스타일·모빌리티 브랜드 콘텐츠다.</p>
         </div>
       </div>
     </div>
@@ -251,8 +285,8 @@
   <section class="feed">
     <div class="wrap">
       <div class="eyebrow">Join the Story</div>
-      <h2>매일 조금씩, 십장생의 이야기가 자랍니다</h2>
-      <p>새로운 캐릭터와 굿즈, 동화 이야기를 Instagram에서 가장 먼저 만나보세요.</p>
+      <h2>매일 조금씩, 십장생의 이야기가 자란다</h2>
+      <p>새로운 캐릭터와 굿즈, 동화가 Instagram에서 가장 먼저 공개된다.</p>
       <div class="feed-stats">
         <div class="stat"><b>27</b><span>Posts</span></div>
         <div class="stat"><b>40+</b><span>Followers</span></div>
@@ -270,7 +304,7 @@
 
   <!-- LINK BACK -->
   <div class="linkback">
-    <p>십장생 Plus는 박미영(d·mauve)의 개인 브랜드입니다.</p>
+    <p>십장생 Plus는 박미영(d·mauve)의 개인 브랜드다.</p>
     <a href="https://mydesignpark-branding.vercel.app" target="_blank" rel="noopener">전체 포트폴리오 보러가기 →</a>
   </div>
 
