@@ -91,15 +91,16 @@
       linear-gradient(rgba(0,64,152,0.34), rgba(0,64,152,0.50)),
       url("hero-bg.jpg") center/cover no-repeat,
       var(--navy-950);}
-  .cover .eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-500); display:inline-block; margin-bottom:26px;}
-  .cover .ten-mark{position:relative; display:block; width:clamp(72px,8vw,92px); height:clamp(72px,8vw,92px); margin:0 auto 40px; padding:0; border:none; background:none; cursor:pointer; -webkit-tap-highlight-color:transparent;}
-  .cover .ten-mark .bar-h, .cover .ten-mark .bar-v{position:absolute; background:var(--ten-color,var(--gold-500)); border-radius:3px; transition:background .3s ease;}
-  .cover .ten-mark .bar-h{left:0; right:0; top:50%; height:7px; margin-top:-3.5px;}
-  .cover .ten-mark .bar-v{top:0; bottom:0; left:50%; width:7px; margin-left:-3.5px;}
+  .cover .eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-500); display:block; margin-bottom:26px;}
+  /* '+' 인터랙티브 마크 — 헤드라인 '다시,' 오른쪽 인라인 배치 (크기·획을 em으로 헤드라인에 비례) */
+  .cover .ten-mark{position:relative; display:inline-block; font-size:inherit; line-height:0; width:1.18em; height:1.18em; vertical-align:-0.06em; margin:0 0.02em 0 0.12em; padding:0; border:none; background:none; cursor:pointer; -webkit-tap-highlight-color:transparent;}
+  .cover .ten-mark .bar-h, .cover .ten-mark .bar-v{position:absolute; background:var(--ten-color,var(--gold-500)); border-radius:0.03em; transition:background .3s ease;}
+  .cover .ten-mark .bar-h{left:0; right:0; top:50%; height:0.15em; margin-top:-0.075em;}
+  .cover .ten-mark .bar-v{top:0; bottom:0; left:50%; width:0.15em; margin-left:-0.075em;}
   .cover .ten-mark.spin{animation:tenSpin .9s cubic-bezier(0.25,0.1,0.25,1);}
-  .cover .ten-mark:focus-visible{outline:2px solid var(--gold-500); outline-offset:8px; border-radius:6px;}
+  .cover .ten-mark:focus-visible{outline:2px solid var(--gold-500); outline-offset:4px; border-radius:6px;}
   @keyframes tenSpin{from{transform:rotate(0deg);} to{transform:rotate(360deg);}}
-  .cover h1{font-family:var(--font-pretendard); font-weight:700; font-size:clamp(36px,5.4vw,60px); line-height:1.18; color:var(--ivory-100); margin:0 auto 18px; display:inline-block; text-align:left;}
+  .cover h1{font-family:var(--font-pretendard); font-weight:700; font-size:clamp(44px,7vw,86px); line-height:1.16; color:var(--ivory-100); margin:0 auto 20px; display:inline-block; text-align:left;}
   .cover h1 span{color:var(--gold-300);}
   .cover .sub{font-family:var(--font-serif); font-size:clamp(16px,2vw,20px); color:var(--gold-300); margin-bottom:26px; letter-spacing:0.02em;}
   .cover .lead{max-width:560px; margin:0 auto 32px; font-size:16.5px; color:var(--ivory-300); line-height:1.8;}
@@ -243,8 +244,7 @@
   <section class="cover">
     <div class="wrap">
       <span class="eyebrow">Ten Longevity Symbols · Reborn</span>
-      <button class="ten-mark" id="tenMark" type="button" title="클릭해 보세요" aria-label="십장생 플러스 심볼 — 클릭하면 색이 바뀝니다"><span class="bar-h"></span><span class="bar-v"></span></button>
-      <h1>전통이 다시,<br><span>브랜드</span>가 되다</h1>
+      <h1>전통이 다시,<button class="ten-mark" id="tenMark" type="button" title="클릭해 보세요" aria-label="십장생 플러스 심볼 — 클릭하면 색이 바뀝니다"><span class="bar-h"></span><span class="bar-v"></span></button><br><span>브랜드</span>가 되다</h1>
       <p class="sub">十長生, 오래된 상징을 오늘의 문법으로</p>
       <p class="lead">해·산·물·구름·돌·소나무·불로초·거북·학·사슴 —<br>장수와 안녕을 기원하던 십장생을, 오늘의 캐릭터와 이야기로 다시 그립니다.</p>
       <div class="chiprow">
