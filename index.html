@@ -80,7 +80,7 @@
 
   .section-head{max-width:640px; margin:0 auto 48px; text-align:center;}
   .section-head .fold-label{justify-content:center; margin-bottom:18px;}
-  h2.title{font-family:var(--font-display); font-size:clamp(28px,4vw,40px); color:var(--ivory-100); line-height:1.25; margin-bottom:16px;}
+  h2.title{font-family:var(--font-display); font-weight:500; font-size:clamp(28px,4vw,40px); color:var(--ivory-100); line-height:1.25; margin-bottom:16px;}
   .panel.light h2.title{color:var(--ink);}
   .section-head p{font-size:15.5px; color:var(--ivory-300);}
   .panel.light .section-head p{color:#5A4F48;}
@@ -102,7 +102,7 @@
   .cover h1 .line{display:block; white-space:nowrap;}
   .cover h1 .hl{color:var(--gold-300);}
   /* '+' 인터랙티브 마크 — 첫 줄 '다시,' 바로 오른쪽. 크기·획을 em으로 헤드라인에 비례 → 모든 화면에서 자동 스케일 */
-  .cover .ten-mark{position:relative; display:inline-block; font-size:inherit; line-height:0; width:0.84em; height:0.84em; vertical-align:-0.07em; margin:0 0 0 0.12em; padding:0; border:none; background:none; cursor:pointer; -webkit-tap-highlight-color:transparent;}
+  .cover .ten-mark{position:relative; display:inline-block; font-size:inherit; line-height:0; width:0.756em; height:0.756em; vertical-align:top; margin:0 0 0 0.12em; padding:0; border:none; background:none; cursor:pointer; -webkit-tap-highlight-color:transparent;}
   .cover .ten-mark .bar-h, .cover .ten-mark .bar-v{position:absolute; background:var(--ten-color,var(--gold-500)); border-radius:0.03em; transition:background .3s ease;}
   .cover .ten-mark .bar-h{left:0; right:0; top:50%; height:0.15em; margin-top:-0.075em;}
   .cover .ten-mark .bar-v{top:0; bottom:0; left:50%; width:0.15em; margin-left:-0.075em;}
@@ -143,13 +143,15 @@
   .sym-card .ic .sym-svg{width:100%; height:100%; display:block;}
   .sym-card .sym-name{display:flex; align-items:baseline; justify-content:center; gap:7px;}
   .sym-card h4{font-family:var(--font-serif); font-size:16px; color:var(--ivory-100); line-height:1.1; margin:0;}
-  .sym-card .sym-name span{font-family:var(--font-serif); font-size:12px; color:rgba(244,238,221,0.65); line-height:1.1;}
+  .sym-card .sym-name span{font-family:var(--font-gothic); font-size:12px; color:rgba(244,238,221,0.65); line-height:1.1;}
 
   /* ---------- universe (light panel) ---------- */
   .uni-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
   .uni-card{border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:30px 26px; background:#fff;}
   .uni-card .ic{width:52px; height:52px; border-radius:50%; background:var(--navy-950); display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
   .uni-card .ic svg{width:26px; height:26px; stroke:var(--gold-500);}
+  .uni-card .ic.emblem{background:none; width:52px; height:52px;}
+  .uni-card .ic.emblem img{width:100%; height:100%; border-radius:50%;}
   .uni-card .tagline{font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy-950); margin-bottom:10px;}
   .uni-card h4{font-family:var(--font-display); font-size:22px; color:var(--ink); margin-bottom:10px;}
   .uni-card p{font-size:14px; color:#5A4F48; line-height:1.75;}
@@ -163,7 +165,7 @@
   .story-ex{border:1px solid var(--line-strong); border-radius:12px; padding:20px 20px; background:rgba(1,90,194,0.18);}
   .story-ex .se-label{font-family:var(--font-serif); font-size:17px; color:var(--gold-300); margin-bottom:10px; display:flex; align-items:baseline; gap:8px;}
   .story-ex .se-label span{font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.06em; color:var(--ivory-muted); text-transform:uppercase;}
-  .story-ex p{font-family:var(--font-pretendard); font-size:14px; line-height:1.7; color:var(--ivory-300);}
+  .story-ex p{font-family:var(--font-pretendard); font-size:16.8px; line-height:1.7; color:var(--ivory-300);}
   @media (max-width:760px){ .story-examples{grid-template-columns:1fr;} }
 
   /* ---------- linkback + footer ---------- */
@@ -2008,13 +2010,13 @@
           <p>정원에 사는 나무 인형 친구들이 들려주는, &lsquo;나의공원&rsquo; 세계관 속 짧은 동화 이야기.</p>
         </div>
         <div class="uni-card">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M6 20 Q6 14 12 14 Q18 14 18 20"/></svg></div>
+          <div class="ic emblem"><img src="zodiac-tiger.svg" alt="십이지신 호랑이 캐릭터"></div>
           <div class="tagline">Zodiac Characters</div>
           <h4>십이지신</h4>
           <p>열두 띠 동물을 십장생과 같은 톤으로 그려낸 캐릭터 시리즈.</p>
         </div>
         <div class="uni-card">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="7" cy="18" r="3"/><circle cx="17" cy="18" r="3"/><path d="M7 18 L11 8 L15 8 L17 18 M11 8 L9 12 L15 12"/></svg></div>
+          <div class="ic emblem"><img src="bikeworld.svg" alt="바이크월드 Spoky 부엉이 캐릭터"></div>
           <div class="tagline">Character Branding</div>
           <h4>바이크월드 · Spoky</h4>
           <p>부엉이 캐릭터 Spoky가 안내하는 라이프스타일·모빌리티 브랜드 콘텐츠.</p>
