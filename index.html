@@ -7,7 +7,7 @@
 <meta name="description" content="해·산·물·구름·돌·소나무·불로초·거북·학·사슴 — 십장생을 현대적 캐릭터와 동화적 세계관으로 재해석한 브랜드, 십장생플러스. Instagram @tenlongevityplus.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
   :root{
@@ -29,12 +29,12 @@
     --carmine-500:#E60012;
     --ember-500:#FF43B3;
     --ink:#231815;        /* 밝은 패널 위 본문 */
-    --font-display:'Noto Serif KR',serif;    /* 제목용 명조 → 노토 세리프 */
-    --font-serif:'Noto Serif KR',serif;      /* 본문 명조 → 노토 세리프 */
-    --font-gothic:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;  /* 고딕 */
-    --font-pretendard:'Pretendard','Noto Sans KR',-apple-system,sans-serif;    /* 프리텐다드 */
-    --font-sans:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;
-    --font-mono:'Roboto Mono',monospace;
+    --font-pretendard:'Pretendard','Pretendard Variable','Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;  /* 프리텐다드 (전면 통일) */
+    --font-display:var(--font-pretendard);   /* 제목: 프리텐다드 */
+    --font-serif:var(--font-pretendard);     /* 본문 명조 → 프리텐다드 */
+    --font-gothic:var(--font-pretendard);    /* 고딕 → 프리텐다드 */
+    --font-sans:var(--font-pretendard);      /* 본문 → 프리텐다드 */
+    --font-mono:var(--font-pretendard);      /* 라벨(모노) → 프리텐다드 */
     --max:1120px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
