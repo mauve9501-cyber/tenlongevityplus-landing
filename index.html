@@ -2137,7 +2137,10 @@
     if(!els.length) return;
     if(!('IntersectionObserver' in window)){ els.forEach(function(e){ e.classList.add('in'); }); return; }
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      entries.forEach(function(en){
+        // 진입했거나(아래→화면), 이미 위로 지나간 섹션(점프/앵커 이동)도 노출
+        if(en.isIntersecting || en.boundingClientRect.top < 0){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
     }, { threshold:0, rootMargin:'0px 0px -12% 0px' });
     els.forEach(function(e){ io.observe(e); });
   })();
